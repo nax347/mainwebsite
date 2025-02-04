@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über uns - truecatspr</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="catfavicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -14,6 +14,11 @@
             font-family: 'Arial', sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
         body {
             background-color: #2a2a2a;
             color: #edaf42;
@@ -21,6 +26,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
         }
 
         .banner {
@@ -34,6 +40,8 @@
 
         .banner img {
             max-height: 180px;
+            max-width: 100%;
+            height: auto;
             padding: 20px;
         }
 
@@ -49,14 +57,60 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
         }
 
-        nav a {
+        /* Desktop-Navigation */
+        .desktop-menu {
+            display: flex;
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .desktop-menu a {
             color: #edaf42;
             text-decoration: none;
-            padding: 0.8rem 1.5rem;
+            padding: 0.8rem 1.2rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+        }
+
+        .desktop-menu a:hover {
+            background-color: #edaf42;
+            color: #2a2a2a;
+        }
+
+        /* Mobile-Navigation */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: #edaf42;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: #1f1f1f;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: 1rem;
+            z-index: 999;
+        }
+
+        .mobile-menu a {
+            color: #edaf42;
+            text-decoration: none;
+            padding: 1rem;
             transition: all 0.3s ease;
             border-radius: 5px;
             text-transform: uppercase;
@@ -65,7 +119,7 @@
             margin: 2px;
         }
 
-        nav a:hover {
+        .mobile-menu a:hover {
             background-color: #edaf42;
             color: #2a2a2a;
         }
@@ -96,25 +150,31 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
         footer {
             background-color: #1a1a1a;
             color: #edaf42;
             padding: 1.5rem;
             margin-top: auto;
             border-top: 1px solid #edaf4233;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
         }
 
         .footer-left {
@@ -146,13 +206,15 @@
         .social-bar {
             display: flex;
             gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .social-btn {
             background-color: #1a1a1a;
             color: #edaf42;
-            width: 35px;
-            height: 35px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -173,6 +235,93 @@
             font-size: 0.85em;
             letter-spacing: 0.5px;
         }
+
+        @media (max-width: 768px) {
+            .banner {
+                height: 150px;
+            }
+
+            .banner img {
+                max-height: 120px;
+                padding: 10px;
+            }
+
+            .nav-container {
+                justify-content: space-between;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .desktop-menu {
+                display: none;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+
+            .content-container {
+                padding: 0 1rem;
+                margin: 1rem auto;
+            }
+
+            .section {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            ul {
+                margin-left: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner {
+                height: 100px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .social-btn {
+                width: 40px;
+                height: 40px;
+            }
+
+            ul {
+                margin-left: 1rem;
+            }
+        }
+
+        @media (min-width: 1201px) {
+            .desktop-menu {
+                gap: 35px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -182,12 +331,26 @@
 
     <nav>
         <div class="nav-container">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">Über uns</a>
-            <a href="goal.html">Unser Ziel</a>
-            <a href="work.html">Wie wir arbeiten</a>
-            <a href="services.html">Leistungen</a>
-            <a href="contact.html">Kontakt</a>
+            <!-- Desktop Navigation -->
+            <div class="desktop-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">Über uns</a>
+                <a href="goal.html">Unser Ziel</a>
+                <a href="work.html">Wie wir arbeiten</a>
+                <a href="services.html">Leistungen</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <button class="hamburger">☰</button>
+            <div class="mobile-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">Über uns</a>
+                <a href="goal.html">Unser Ziel</a>
+                <a href="work.html">Wie wir arbeiten</a>
+                <a href="services.html">Leistungen</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
         </div>
     </nav>
 
@@ -210,14 +373,14 @@
         <div class="section">
             <h2>Was du von uns erwarten kannst</h2>
             <p>„truecatspr“ begleitet dich durch den gesamten Promotionsprozess, ersetzt aber nicht die komplette Arbeit. In einem detaillierten Beratungsgespräch zeigen wir dir:</p>
-            <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+            <ul>
                 <li>Wie Promotion funktioniert</li>
                 <li>Welche Schritte du gehen musst</li>
                 <li>Welches Material benötigt wird (Biografien, Musik, Videos)</li>
             </ul>
             <p>Nach dem Gespräch erstellen wir eine Materialliste, die genau aufzeigt, welche Inhalte vom Künstler zu produzieren sind. Auch bei der Produktion dieses Materials stehen wir unterstützend zur Seite.</p>
             <p>Bei Buchung eines Promopakets (Single, EP, LP) übernehmen wir die gesamte Promotion für den vereinbarten Zeitraum. So kannst du:</p>
-            <ul style="margin-left: 2rem;">
+            <ul>
                 <li>Dein Promo-Material in den Produktionsprozess integrieren</li>
                 <li>Zeitaufwändige Aufgaben wie wöchentliche Posts an uns delegieren</li>
                 <li>Die Zielgruppenkommunikation professionell umsetzen lassen</li>
@@ -256,5 +419,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Hamburger-Menü Funktionalität
+        document.querySelector('.hamburger').addEventListener('click', function(e) {
+            e.stopPropagation();
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('active');
+        });
+
+        // Menü schließen bei Klick außerhalb
+        document.addEventListener('click', function() {
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
