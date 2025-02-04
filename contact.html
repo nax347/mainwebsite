@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>truecatspr - Music Promotion</title>
+    <title>Kontakt - truecatspr</title>
     <link rel="icon" type="image/x-icon" href="catfavicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -173,11 +173,69 @@
             font-size: 0.85em;
             letter-spacing: 0.5px;
         }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.8rem;
+            border: 1px solid #edaf4233;
+            border-radius: 5px;
+            background-color: #1a1a1a55;
+            color: #edaf42;
+            font-size: 1em;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #edaf4280;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form button {
+            background-color: #edaf42;
+            color: #2a2a2a;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #d89c3a;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: #edaf42;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #d89c3a;
+        }
     </style>
 </head>
 <body>
     <div class="banner">
-        <img src="banner2.jpeg" alt="truecatspr Banner">
+        <img src="banner2.jpeg" alt="Kontakt Banner">
     </div>
 
     <nav>
@@ -187,14 +245,31 @@
             <a href="goal.html">Unser Ziel</a>
             <a href="work.html">Wie wir arbeiten</a>
             <a href="services.html">Leistungen</a>
-            <a href="contact.html">Kontakt</a>
+            <a href="contact.html" class="active">Kontakt</a>
         </div>
     </nav>
 
     <div class="content-container">
         <div class="section">
-            <h1>Willkommen bei truecatspr</h1>
-            <p>Ihr Partner für authentische Musikpromotion</p>
+            <h1>Kontakt</h1>
+            <p>Hast du Fragen oder möchtest du mehr über unsere Dienstleistungen erfahren? Wir freuen uns darauf, von dir zu hören! Fülle einfach das Kontaktformular aus, und wir melden uns schnellstmöglich bei dir.</p>
+        </div>
+
+        <div class="section">
+            <form class="contact-form" action="https://formspree.io/f/mrbekwna" method="POST">
+                <input type="text" name="name" placeholder="Dein Name" required>
+                <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+                <input type="text" name="subject" placeholder="Betreff" required>
+                <textarea name="message" placeholder="Deine Nachricht" required></textarea>
+                <button type="submit">Nachricht senden</button>
+            </form>
+        </div>
+
+        <div class="section contact-info">
+            <h2>Oder kontaktiere uns direkt:</h2>
+            <p>
+                <strong>E-Mail:</strong> <a href="mailto:truecats@gmail.com">truecats@gmail.com</a><br>
+            </p>
         </div>
     </div>
 
