@@ -3,94 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>truecatspr | Music Promotion</title>
     <style>
+        :root {
+            --primary: #2A2A2A;
+            --secondary: #D4AF37; /* Mattes Gold */
+            --accent: #E0E0E0;
+            --background: #1A1A1A; /* Mattes Dunkelgrau */
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background-color: #2a2a2a;
-            font-family: 'Arial', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: var(--background);
+            color: var(--accent);
+            line-height: 1.7;
         }
 
-        .banner-container {
-            width: 100%;
-            max-width: 1200px;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
+        /* Banner */
         .banner {
             width: 100%;
-            max-width: 600px;
-            height: auto;
+            height: 0;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: url('dein-banner.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        /* Navigation */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            background: var(--primary);
+            padding: 1rem;
+            gap: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-item {
+            color: var(--secondary);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-item:hover {
+            opacity: 0.8;
+        }
+
+        /* Hauptbild */
+        .main-image {
+            width: 100%;
+            height: 70vh;
+            background: url('dein-hauptbild.jpg') no-repeat center center;
+            background-size: cover;
+            margin-top: 1rem;
+        }
+
+        /* Seiteninhalte */
+        .page {
+            display: none;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .page.active {
             display: block;
-            margin: 0 auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
-        .construction-notice {
+        .page h2 {
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
             text-align: center;
-            color: #888;
-            margin: 4rem 0;
-            animation: fadeIn 2s ease-in;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 1rem;
-            color: #666;
-        }
-
-        .underline {
-            width: 200px;
-            height: 2px;
-            background: #444;
-            margin: 1rem auto;
-            animation: underlinePulse 2s infinite;
-        }
-
-        @keyframes underlinePulse {
-            0% { width: 200px; }
-            50% { width: 250px; background: #555; }
-            100% { width: 200px; }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         @media (max-width: 768px) {
-            .banner-container {
-                padding: 1rem;
-                margin-top: 1rem;
+            .nav-tabs {
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding: 0.8rem;
             }
             
-            h1 {
-                font-size: 1.8em;
+            .main-image {
+                height: 50vh;
             }
         }
     </style>
 </head>
 <body>
-    <div class="banner-container">
-        <img src="banner.jpeg" alt="Website Banner" class="banner">
-    </div>
+    <!-- Banner -->
+    <div class="banner"></div>
 
-    <div class="construction-notice">
-        <h1>Website in Arbeit</h1>
-        <div class="underline"></div>
-        <p>Wir arbeiten mit Hochdruck an unserer neuen Präsenz</p>
-        <p>Bald sind wir online!</p>
-    </div>
+    <!-- Navigation -->
+    <nav class="nav-tabs">
+        <a href="#home" class="nav-item active" onclick="showPage('home')">Home</a>
+        <a href="#about" class="nav-item" onclick="showPage('about')">Über uns</a>
+        <a href="#work" class="nav-item" onclick="showPage('work')">How We Work</a>
+        <a href="#blog" class="nav-item" onclick="showPage('blog')">Beiträge</a>
+        <a href="#contact" class="nav-item" onclick="showPage('contact')">Kontakt</a>
+    </nav>
+
+    <!-- Hauptbild -->
+    <div class="main-image"></div>
+
+    <!-- Seiteninhalte -->
+    <main>
+        <!-- Home -->
+        <section id="home" class="page active">
+            <div class="page-content">
+                <h2>Deine Musik. Unsere Passion.</h2>
+                <p>Professionelle Promotion für aufstrebende Künstler</p>
+            </div>
+        </section>
+
+        <!-- Über uns -->
+        <section id="about" class="page">
+            <div class="page-content">
+                <h2>Über uns</h2>
+                <p>Ein unabhängiges Promo-Label, das Musikern hilft...</p>
+            </div>
+        </section>
+
+        <!-- How We Work -->
+        <section id="work" class="page">
+            <div class="page-content">
+                <h2>Unsere Arbeitsweise</h2>
+                <!-- Inhalt einfügen -->
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog" class="page">
+            <div class="page-content">
+                <h2>Aktuelle Beiträge</h2>
+                <!-- Blogposts -->
+            </div>
+        </section>
+
+        <!-- Kontakt -->
+        <section id="contact" class="page">
+            <div class="page-content">
+                <h2>Kontakt aufnehmen</h2>
+                <!-- Kontaktformular -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 truecatspr | Alle Rechte vorbehalten</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Alle Seiten ausblenden
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Aktive Seite anzeigen
+            document.getElementById(pageId).classList.add('active');
+
+            // Navigation aktualisieren
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${pageId}`) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
