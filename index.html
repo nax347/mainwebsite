@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #2a2a2a;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .banner-container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .banner {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .construction-notice {
+            text-align: center;
+            color: #888;
+            margin: 4rem 0;
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .underline {
+            width: 200px;
+            height: 2px;
+            background: #444;
+            margin: 1rem auto;
+            animation: underlinePulse 2s infinite;
+        }
+
+        @keyframes underlinePulse {
+            0% { width: 200px; }
+            50% { width: 250px; background: #555; }
+            100% { width: 200px; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .banner-container {
+                padding: 1rem;
+                margin-top: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <img src="DEIN-BANNER.png" alt="Website Banner" class="banner">
+    </div>
+
+    <div class="construction-notice">
+        <h1>Website in Arbeit</h1>
+        <div class="underline"></div>
+        <p>Wir arbeiten mit Hochdruck an unserer neuen Präsenz</p>
+        <p>Bald sind wir online!</p>
+    </div>
+</body>
+</html>

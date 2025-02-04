@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Press Kit (EPK)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .epk-info {
+            font-size: 1.1em;
+            color: #888;
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .band-photo {
+            flex: 1;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .button-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .epk-button {
+            background: #2d2d2d;
+            color: #fff;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        .epk-button:hover {
+            background: #3d3d3d;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .button-grid > button:last-child {
+            grid-column: span 2;
+            text-align: center;
+            background: #777777;
+            font-weight: bold;
+        }
+
+        .button-grid > button:last-child:hover {
+            background: #777777;
+        }
+
+        .impressum {
+            background: #252525;
+            padding: 2rem;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            .band-photo {
+                max-width: 100%;
+            }
+            
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .button-grid > button:last-child {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>KÜNSTLERNAME</h1>
+            <div class="epk-info">
+                <p>Genre: Electronic | Release: <em>Albumtitel</em> | Release-Datum: 00.00.2024</p>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <img src="BANDFOTO-PLATZHALTER.jpg" alt="Bandfoto" class="band-photo">
+            
+            <div class="button-grid">
+                <button class="epk-button" onclick="window.open('ARTWORK-LINK')">Artwork</button>
+                <button class="epk-button" onclick="window.open('MUSIK-LINK')">Musik</button>
+                <button class="epk-button" onclick="window.open('VIDEOS-LINK')">Videos</button>
+                <button class="epk-button" onclick="window.open('LYRICS-LINK')">Lyrics</button>
+                <button class="epk-button" onclick="window.open('PRESSE-LINK')">Pressetext</button>
+                <button class="epk-button" onclick="window.open('BIO-LINK')">Biografie</button>
+                <button class="epk-button" onclick="window.open('FOTOS-LINK')">Pressefotos</button>
+                <button class="epk-button" onclick="window.open('KONTAKT-LINK')">Kontaktdaten</button>
+                <button class="epk-button" onclick="window.open('LINKTREE-LINK')">Linktree</button>
+                <button class="epk-button" onclick="window.open('TOURDATES-LINK')">Tour</button>
+                <button class="epk-button" onclick="downloadPresskit()">Download Presskit</button>
+            </div>
+        </div>
+
+        <div class="impressum">
+            <h3>Impressum</h3>
+            <p>Künstlername | Management: Max Mustermann | Tel: 0123/456789<br>
+            E-Mail: info@example.com | Website: www.example.com<br>
+            © 2024 Alle Rechte vorbehalten</p>
+        </div>
+    </div>
+
+    <script>
+        function downloadPresskit() {
+            if(confirm('Möchten Sie das Presskit herunterladen?')) {
+                window.open('PRESSKIT-DOWNLOAD-LINK');
+            }
+        }
+    </script>
+</body>
+</html>
