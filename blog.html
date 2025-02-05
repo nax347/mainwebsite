@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - truecatspr</title>
+    <link rel="icon" type="image/x-icon" href="catfavicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Basis-Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #2a2a2a;
+            color: #edaf42;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .banner {
+            width: 100%;
+            height: 200px;
+            background: #1f1f1f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner img {
+            max-height: 180px;
+            max-width: 100%;
+            height: auto;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #1f1f1f;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .desktop-menu {
+            display: flex;
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .desktop-menu a {
+            color: #edaf42;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+        }
+
+        .desktop-menu a:hover {
+            background-color: #edaf42;
+            color: #2a2a2a;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: #edaf42;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: #1f1f1f;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: 1rem;
+            z-index: 999;
+        }
+
+        .mobile-menu a {
+            color: #edaf42;
+            text-decoration: none;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            margin: 2px;
+        }
+
+        .mobile-menu a:hover {
+            background-color: #edaf42;
+            color: #2a2a2a;
+        }
+
+        /* Blog-Layout */
+        .blog-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            min-height: 70vh;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 120px;
+            height: calc(100vh - 140px);
+            overflow-y: auto;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 12px;
+            background: #1a1a1a;
+            border: 1px solid #edaf4233;
+            color: #edaf42;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .article-list {
+            list-style: none;
+        }
+
+        .article-item {
+            margin: 0.5rem 0;
+            padding: 1rem;
+            background: #1a1a1a55;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .article-item:hover {
+            background: #edaf4211;
+        }
+
+        .main-content {
+            padding: 0 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .default-message {
+            text-align: center;
+            opacity: 0.6;
+            padding: 4rem;
+        }
+
+        .post {
+            background-color: #1a1a1a55;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .post img {
+            width: 152px;
+            height: 152px;
+            margin-right: 2rem;
+            border-radius: 10px;
+            object-fit: cover;
+            float: left;
+        }
+
+        @media (max-width: 768px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                height: auto;
+            }
+
+            .post img {
+                float: none;
+                width: 100%;
+                height: auto;
+                margin: 0 0 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="banner2.jpeg" alt="truecatspr Banner">
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <div class="desktop-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">Über uns</a>
+                <a href="services.html">Leistungen</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
+            <button class="hamburger">☰</button>
+            <div class="mobile-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">Über uns</a>
+                <a href="services.html">Leistungen</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="blog-container">
+        <div class="sidebar">
+            <input type="text" id="searchInput" placeholder="Beiträge durchsuchen...">
+            <ul class="article-list" id="articleList">
+                <!-- ERSTER ARTIKEL -->
+                <li class="article-item" data-article="leitfadenKuenstlerbiografie">
+                    Leitfaden für Künstlerbiografien
+                </li>
+                <li class="article-item" data-article="leitfadenPressetext">
+                    Leitfaden Pressetexte
+                </li>
+                <li class="article-item" data-article="leitfadenLyricvideo">
+                    Leitfaden für Lyricvideos
+                </li>
+                <li class="article-item" data-article="leitfadenLyricSinglecommentaries">
+                    Leitfaden für Lyric- Single Commentaries
+                </li>
+                <li class="article-item" data-article="wichtigeSocialContent">
+                    Zusätzliche Social-Media-Content Formate
+                </li>
+                <li class="article-item" data-article="leitfadenArtwork">
+                    Leitfaden für Artwork
+                </li>
+                <li class="article-item" data-article="kriterienAudioaufnahme">
+                    Kriterien für Audioaufnahmen
+                </li>
+                <li class="article-item" data-article="crossplatforming">
+                    Cross-Plattform-Nutzung
+                </li>
+                <li class="article-item" data-article="zeitfresserSocial">
+                    Zeitfresser: Social Media
+                </li>
+                <!-- Hier weitere Artikel einfügen -->
+
+                <!-- Tipps-->
+                <li class="article-item" data-article="tippBTS">
+                    Quick Tipp: Behind-the-Scenes
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="main-content" id="mainContent">
+            <div class="default-message">
+                Wähle einen Artikel aus der Liste oder suche nach einem Thema
+            </div>
+        </div>
+    </div>
+    <script>
+        // ARTIKEL-DATENBANK
+        const articles = {
+            // ERSTER ARTIKEL
+            leitfadenKuenstlerbiografie: `
+            <div class="post">
+                <h1>Leitfaden für die Erstellung einer Künstlerbiografie</h1><br>
+                <div class="post-text">
+                    <img src="textfile.png">
+                    <div class="text">
+                        <p>Eine Künstlerbiografie ist mehr als nur ein Text – sie ist das visuelle und narrative Aushängeschild eines Künstlers. Sie wird für Pressemitteilungen, Social Media, Websites und Bookings benötigt, um sofortige Aufmerksamkeit zu erregen und eine emotionale Verbindung zum Publikum herzustellen.</p>
+                        <ul>
+                            <li><strong>Ziel:</strong> Den Künstler authentisch präsentieren und seine Kernbotschaften vermitteln.</li>
+                            <li><strong>Zielgruppen:</strong> Medien, Booking-Agenturen, Fans, Festivalorganisator:innen.</li>
+                            </ul>
+                            <h2><br>Schritt-für-Schritt-Anleitung:</h2>
+                            <ol>
+                                <li><strong>Einleitung:</strong> Beginne mit einem prägnanten Satz, der dich als Künstler klar definiert und dein Genre nennt.</li>
+                                <li><strong>Ziele:</strong> Formuliere in einem Satz, was du als Künstler erreichen möchtest.</li>
+                                <li><strong>Strategie:</strong> Erkläre in zwei Sätzen, wie du deine Ziele als Künstler verfolgst und welche Schritte du unternimmst, um diese zu erreichen.</li>
+                                <li><strong>Vergleich mit ähnlichen Künstlern:</strong> Nenne zwei Künstler, die dir stilistisch am nähesten stehen, und hebe Gemeinsamkeiten sowie Unterschiede hervor, damit dich der Leser direkt richtig einordnen weiß.</li>
+                                <li><strong>Aktueller Stand:</strong> Beschreibe in zwei Sätzen, an welchem Punkt deiner Reise du dich momentan befindest und was du bisher erreicht hast.</li>
+                                <li><strong>Ausblick:</strong> Schließe mit einer Perspektive auf deine nahe Zukunft und was als Nächstes für dich ansteht.</li>
+                                </ol>
+                                <p>Mit diesem Leitfaden bist du bestens gerüstet, um deine Biografie so zu gestalten, dass sie alles Wichtige vermittelt, was deine Zielgruppen wissen müssen. Denke daran, deine Biografie regelmäßig zu aktualisieren, um immer auf dem neuesten Stand zu bleiben.</p>
+                    </div>
+                </div>
+            </div>
+            `,
+            leitfadenPressetext: `
+        <div class="post">
+            <h1>Leitfaden für die Erstellung eines Pressetextes</h1><br>
+            <div class="post-text">
+                <img src="textfile.png">
+                <div class="text">
+                    <p>Ein Pressetext ist ein entscheidendes Instrument, um Medienvertreter und Journalisten schnell und präzise über ein aktuelles Projekt oder Release zu informieren. Im Gegensatz zur Biografie, die die langfristige Entwicklung und Identität des Künstlers umfassend beschreibt, konzentriert sich der Pressetext auf das aktuelle Release – sei es ein neues Album, eine Single, ein Musikvideo oder ein bevorstehendes Konzert. Der Pressetext soll das Interesse der Medien wecken und eine hohe Anzahl an Veröffentlichungen und Berichterstattung generieren.</p>
+                    <ul>
+                        <li><strong>Ziel:</strong> Ein informativer und spannender Text, der Medienvertreter dazu motiviert, über das aktuelle Release zu berichten.</li>
+                        <li><strong>Zielgruppen:</strong> Journalisten, Medien, Musikblogs, Radiosender und Booking-Agenturen.</li>
+                    </ul>
+                    <h2><br>Schritt-für-Schritt-Anleitung:</h2>
+                    <ol>
+                        <li><strong>Prägnanter Einstieg:</strong> Beginne mit einer starken, aufmerksamkeitsstarken Einleitung, die bereits im ersten Satz den Künstler, das Release, das Genre und das Releasedatum nennt.</li>
+                        <li><strong>Einordnung in Kontext:</strong> Erwähne das vorherige Projekt und wie sich dieses Release vom vorherigen unterscheidet oder anschließt.</li>
+                        <li><strong>Künstlerische Vision und Hintergrund:</strong> Gib einen kurzen Einblick darin, was dich zu diesem Release getrieben hat, und nenne das zentrale Thema oder die Botschaft. Dieser Abschnitt sollte auf die musikalische und kreative Ausrichtung eingehen, aber immer im Hinblick auf das aktuelle Release.</li>
+                        <li><strong>Höhepunkte und Meilensteine:</strong> Falls relevant, nenne besondere Erfolge, die mit dem neuen Release zusammenhängen – z. B. erfolgreiche Pre-Singles, besondere Kooperationen oder die Reaktionen der ersten Fans. Bei Konzerten oder Events kann dies z. B. eine ausverkaufte Show oder ein bemerkenswerter Veranstaltungsort sein.</li>
+                        <li><strong>Zitate und Stimmen:</strong> Ein Zitat des Künstlers oder eines relevanten Teams (z. B. Produzenten oder Manager) zum neuen Release kann dem Text Authentizität verleihen und den journalistischen Wert steigern. Dies sorgt für einen persönlicheren Touch und hilft, eine Verbindung zum Projekt herzustellen.</li>
+                        <li><strong>Verfügbarkeit und Call to Action:</strong> Stelle sicher, dass die Medien wissen, wie und wo das Release verfügbar ist. Biete Informationen zu Streaming-Diensten, Verkaufsplattformen oder Konzertdaten. Der Call to Action könnte beinhalten, dass Journalisten das Release weiterverbreiten, ein Interview vereinbaren oder weitere Informationen anfordern.</li>
+                        <li><strong>Abschluss:</strong> Beende den Pressetext mit allen relevanten Kontaktdaten (Website, Social Media-Links, Ansprechpartner für Presse und Booking). Dies ermöglicht den Journalisten, unkompliziert auf weitere Informationen zuzugreifen oder Kontakt aufzunehmen.</li>
+                        <li><strong>Autor:</strong> Gebe den Autor des Textes an. Ggf. im Namen der Gruppe, wenn es euer Pressetext für euer Release an die Medien ist.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    `,                    
+            leitfadenLyricvideo: `
+        <div class="post">
+            <h1>Leitfaden für die Erstellung eines Lyricvideos</h1><br>
+            <div class="post-text">
+                <img src="videofile.png">
+                <div class="text">
+                    <p>Ein Lyricvideo ist eine kreative Möglichkeit, deine Musik visuell zu unterstützen, indem die Songtexte auf dem Bildschirm angezeigt werden. Es dient nicht nur dazu, den Song erlebbar zu machen, sondern bietet den Fans auch eine Möglichkeit, die Lyrics zu verfolgen und besser zu verstehen. Hier sind einige wichtige Punkte zur Erstellung und Nutzung eines Lyricvideos:</p>
+                    <h2><br>1. Funktion eines Lyricvideos:</h2>
+                    <p>Lyricvideos geben den Songtext visuell wieder und ermöglichen es den Fans, mit dem Text zu interagieren, während sie den Song hören. Sie sind besonders dann nützlich, wenn der Song tiefere Bedeutungsebenen oder interessante Wortspiele enthält, die der Hörer besser nachvollziehen kann, wenn er die Lyrics direkt auf dem Bildschirm sehen kann.</p>
+                    <h2><br>2. Lesbarkeit der Lyrics:</h2>
+                    <p>Die Lesbarkeit der Lyrics ist entscheidend. Die Schriftgröße sollte groß genug sein, dass die Texte auch auf kleinen Bildschirmen (wie auf Smartphones) gut erkennbar sind. Achte darauf, dass die Schriftart gut lesbar und der Text farblich von deinem Hintergrund abgehoben ist.</p>
+                    <h2><br>3. Hintergrund und emotionale Verbindung:</h2>
+                    <p>Der Hintergrund des Videos sollte zum Genre und der Stimmung des Songs passen. Für einen emotionalen Song kann ein ruhiger, minimalistischer Hintergrund gut funktionieren, während bei einem energiegeladenen Track ein dynamischerer Hintergrund die richtige Wahl ist. Achte darauf, dass der Hintergrund den Text nicht überwältigt, sondern unterstützt.</p>
+                    <h2><br>4. Videoeditoren:</h2>
+                    <p>Zwei kostenlose und leicht zugängliche Videoeditoren, die du für die Erstellung eines Lyricvideos verwenden kannst, sind:</p>
+                    <ul>
+                        <li><strong>Shotcut:</strong> Ein Open-Source-Videoeditor, der viele nützliche Funktionen zur Erstellung von Lyricvideos bietet. Du kannst Text auf Videos einfügen, Effekte anwenden und vieles mehr.</li>
+                        <li><strong>DaVinci Resolve:</strong> Ein professioneller Videoeditor, der auch in der kostenlosen Version viele Funktionen bietet, um Texte zu animieren und in deinem Video hinzuzufügen. Es ist besonders für fortgeschrittene Benutzer geeignet.</li>
+                    </ul>
+                    <h2><br>5. Nutzung für TikTok und Instagram Stories:</h2>
+                    <p>Lyricvideos eignen sich hervorragend für Social-Media-Plattformen wie TikTok und Instagram Stories. Du kannst entscheidende Passagen des Songs, wie eine prägnante Strophe oder den Chorus, herausgreifen und diese in separaten, kurzen Videos posten. Durch das schrittweise Veröffentlichen dieser Highlights kannst du das Interesse deiner Fans steigern und sie motivieren, den gesamten Song anzuhören. Achte darauf, die Clips so zu schneiden, dass die Zuschauer sofort wissen, worum es geht und sich mit dem Song verbinden können.</p>
+                </div>
+            </div>
+        </div>
+    `,
+            leitfadenLyricSinglecommentaries: `
+    <div class="post">
+        <h1>Leitfaden für die Erstellung von Lyric- und Single-Commentary-Videos</h1><br>
+        <div class="post-text">
+            <img src="videofile.png">
+            <div class="text">
+                <p>Lyric- und Single-Commentary-Videos sind eine hervorragende Möglichkeit, deinem Publikum eine tiefere Verbindung zu deiner Musik zu ermöglichen. Diese Videos bieten Einblicke in die Bedeutung der Lyrics sowie die Entstehungsgeschichte des Songs. Sie ermöglichen es dir, deine persönliche Perspektive und die Emotionen hinter dem Song zu teilen und deine Fans an diesem kreativen Prozess teilhaben zu lassen. Die Sprache der Lyrics und Commentaries sollte dabei einheitlich sein. Nutze im Notfall Untertitel.</p><br>
+                <h2>1. Lyric-Commentary-Video (Erklärung der Songtexte):</h2>
+                <p>In einem Lyric-Commentary-Video erklärst du die Bedeutung und die Geschichten hinter den einzelnen Lyrics deines Songs. Es kann eine Art „Songanalyse“ sein, bei der du bestimmte Textpassagen erklärst und den Fans einen tieferen Einblick in deine Gedanken und Intentionen gibst. Das hilft besonders, wenn deine Texte komplex oder metaphorisch sind und die Fans eine bessere Erklärung wollen, um die Bedeutung zu verstehen.</p>
+                <p><strong>Tipp zur Authentizität:</strong> Handyaufnahmen sind hier ideal, da sie dem Video eine persönliche und authentische Note verleihen. Zeige dich in einer entspannten Umgebung, zum Beispiel bei dir zu Hause oder im Studio, um eine direkte Verbindung zu deinen Fans herzustellen. Diese „unpolierten“ Aufnahmen wirken oft näher und ehrlicher.</p><br>
+                <h2>2. Single-Commentary-Video (Hintergrundgeschichte des Songs):</h2>
+                <p>In einem Single-Commentary-Video beschreibst du den Produktionsprozess. Erzähle davon, wie der Weg von der Idee im Kopf bis zur fertigen Single abgelaufen ist.</p>
+                <p><strong>Tipp zur Authentizität:</strong> Auch hier bieten Handyaufnahmen eine großartige Möglichkeit, authentisch und nahbar zu wirken. Ein einfaches Gespräch vor der Kamera schafft Nähe zu deinen Fans und macht das Video weniger gestellt. So wirkst du als Künstler realer und greifbarer.</p><br>
+                <h2>3. Veröffentlichung und Nutzung für TikTok und Instagram Stories:</h2>
+                <p><strong>Teile entscheidende Passagen:</strong> Ähnlich wie beim Lyricvideo kannst du einzelne Teile der Commentary-Videos herausgreifen und nach und nach in kurzen Clips veröffentlichen. Trenne verschiedene Abschnitte der Videos – etwa eine Passage aus dem Lyric-Commentary und einen Teil aus dem Single-Commentary – und poste diese über mehrere Tage hinweg. So bleibt das Interesse an deinem Song bestehen und du kannst die Aufmerksamkeit auf verschiedene Aspekte des Tracks lenken.</p>
+                <p><strong>Für TikTok und Instagram Stories:</strong> Diese kurzen, persönlichen Videos eignen sich hervorragend für Social-Media-Plattformen wie TikTok und Instagram Stories, wo kurze und prägnante Inhalte gut ankommen. Du kannst zum Beispiel eine interessante Textzeile erklären oder eine überraschende Wendung in der Entstehungsgeschichte des Songs verraten. Dadurch bleibst du konstant im Gespräch und baust eine stärkere Bindung zu deiner Fanbase auf.</p>
+            </div>
+        </div>
+    </div>
+`,
+            wichtigeSocialContent: `
+    <div class="post">
+        <h1>Zusätzliche Social-Media-Content-Formate für Musiker und wie du sie effizient nutzt</h1><br>
+        <div class="post-text">
+            <img src="socialfile.png">
+            <div class="text">
+                <p>Social Media ist für Musiker ein unverzichtbares Tool, um ihre Musik zu promoten und die Verbindung zu ihrer Fanbase zu stärken. Hier sind die wichtigsten Content-Formate, die du nutzen kannst, sowie Tipps zur Produktion und Planung:</p>
+                <h2><br>1. Lyric Commentaries</h2>
+                <p>Erkläre detailliert die Bedeutung der Lyrics und beschreibe den Kontext.</p>
+                <p><strong>Plattformen:</strong> TikTok, Instagram Stories, YouTube</p>
+                <p><strong>Tipp:</strong> Halte es authentisch mit einer Handyaufnahme und teile das Video in kleine Häppchen, die du zeitversetzt postest.</p>
+                <h2><br>2. Single Commentaries</h2>
+                <p>Beschreibe den technischen Produktionsprozess von der Idee im Hirn bis zur fertigen Single.</p>
+                <p><strong>Plattformen:</strong> TikTok, YouTube, Instagram</p>
+                <p><strong>Tipp:</strong> Nutze ebenfalls kurze, einfache Handyaufnahmen und veröffentliche die Clips nach und nach.</p>
+                <h2><br>3. Lyric Video</h2>
+                <p>Visualisiere deinen Song mit eingeblendeten Lyrics.</p>
+                <p><strong>Plattformen:</strong> YouTube, Instagram, TikTok</p>
+                <p><strong>Tipp:</strong> Achte auf gute Lesbarkeit und thematisch passende Gestaltung. Teile das Video in kurze Abschnitte für mehr Reichweite.</p>
+                <h2><br>4. Vorstellungsvideo</h2>
+                <p>Gib den Fans einen ersten Eindruck von deinem neuen Release. Zeige, wer du bist und was auf die Fans zukommt.</p>
+                <p><strong>Plattformen:</strong> Instagram, TikTok, Facebook</p>
+                <p><strong>Tipp:</strong> Halte es kurz und bündig und poste es zu Beginn der Promo-Phase.</p>
+                <h3><br>Allgemeine Tipps:</h3>
+                <ul>
+                    <li><strong>Kleine Häppchen:</strong> Präsentiere deinen Content in kleinen, aufeinander aufbauenden Teilen für jede Plattform. So bleibt das Interesse der Fans erhalten und du erreichst mehr Aufmerksamkeit.</li>
+                    <li><strong>Automatisierung:</strong> Nutze Planungstools wie Buffer oder Later, um Content im Voraus zu erstellen und automatisch zu posten.</li>
+                </ul>
+                <p><br>Mit einer durchdachten Content-Strategie und Cross-Plattform-Nutzung kannst du deine Reichweite erhöhen und dich ganz auf das Wesentliche konzentrieren: Deine Kunst!</p>
+            </div>
+        </div>
+    </div>
+`,
+            leitfadenArtwork: `
+    <div class="post">
+        <h1>Leitfaden für Artwork für Musiker</h1><br>
+        <div class="post-text">
+            <img src="artworkfile.png">
+            <div class="text">
+                <p>Das Artwork ist die visuelle Darstellung deines Releases und spielt eine Schlüsselrolle, um das Interesse deiner Zielgruppe zu wecken und die Stimmung oder das Thema deines Musikstücks zu vermitteln. Im Gegensatz zu Pressefotos, die dich als Künstler darstellen, ist das Artwork die „Verpackung“ deines aktuellen Releases und sollte daher sorgfältig gestaltet werden. Achte auf folgende Punkte:</p>
+                <h2><br>1. Die „Verpackung“ deines Releases:</h2>
+                <p>Das Artwork repräsentiert das spezifische Release (Single, EP, Album, etc.) und soll visuell ansprechend sein. Es gibt der Musik eine visuelle Identität, die Fans und Medien sofort mit deinem Werk verbinden. Schließe die Augen und stelle dir deine Musik visuell vor.</p>
+                <h2><br>2. Aktualisierung bei jedem Release:</h2>
+                <p>Das Artwork sollte mit jedem neuen Release aktualisiert werden, um es von früheren Veröffentlichungen abzugrenzen und das Interesse an deinem neuesten Projekt zu steigern. Es hilft, eine visuelle Geschichte zu erzählen und deinem künstlerischen Werdegang Ausdruck zu verleihen.</p>
+                <h2><br>3. Verhältnis zu Pressefotos:</h2>
+                <p>Während Pressefotos den Künstler zeigen und dabei helfen, seine Persönlichkeit zu präsentieren, fokussiert sich das Artwork auf das Release selbst und spiegelt oft die Stimmung oder das Konzept der Musik wider. Es ist also die visuelle „Verpackung“ der Musik.</p>
+                <h2><br>4. Zusammenhängende Releases (EP/LP):</h2>
+                <p>Bei zusammenhängenden Releases wie einer EP oder einem Album bietet es sich an, das Artwork nur leicht zu verändern, sodass es immer noch eine visuelle Kontinuität gibt. So bleibt eine gewisse Wiedererkennbarkeit bestehen, auch wenn jedes Release seine eigene Identität hat. Achte darauf, dass es eine visuelle Verbindung zwischen den Cover-Designs gibt, z. B. durch ähnliche Farben, Symbole oder wiederkehrende Designelemente.</p>
+                <h2><br>5. Wichtige Elemente im Artwork:</h2>
+                <ul>
+                    <li>Der Titel des Releases und der Künstlername sollten deutlich und gut lesbar sein.</li>
+                    <li>Achte auf eine hohe Qualität der Grafik, damit sie auch in kleinen Formaten (wie auf Streaming-Diensten oder Social Media) gut aussieht.</li>
+                    <li>Überlege, welche Emotionen oder Themen das Artwork widerspiegeln soll. Es sollte zum Musikstil und zur Botschaft des Releases passen.</li>
+                </ul>
+                <h2><br>6. Format und Anforderungen:</h2>
+                <p>Das Artwork sollte in den von den Distributoren geforderten Formaten eingereicht werden (meistens 3000 x 3000 px, JPG oder PNG mit 300 dpi). Stelle sicher, dass es den Spezifikationen für Streaming-Dienste, Online-Shops und Pressestellen entspricht.</p>
+            </div>
+        </div>
+    </div>
+`,
+            kriterienAudioaufnahme: `
+    <div class="post">
+        <h1>Kriterien für die Audioaufnahmen bei Einreichung an einen Distributor</h1><br>
+        <div class="post-text">
+            <img src="audiofile.png">
+            <div class="text">
+                <p>Die Audioqualität ist entscheidend für die Veröffentlichung deiner Musik. Wenn du deine Tracks bei einem Distributor einreichst, achte auf folgende Punkte:</p>
+                <h2><br>1. Dateiformat:</h2>
+                <p>WAV ist das gängigste Format und bietet eine hohe Klangqualität. Nutze mindestens 16-Bit/44,1 kHz, idealerweise jedoch 24-Bit/44,1 kHz für noch bessere Qualität.</p>
+                <h2><br>2. Lautstärke & Pegel:</h2>
+                <p>Achte darauf, dass der Lautstärkepegel bei -1 dBFS liegt, um Übersteuerung und Verzerrungen zu vermeiden.</p>
+                <h2><br>3. Kompression & Dynamik:</h2>
+                <p>Nutze beim Mastering eine subtile Kompression, um die Dynamik zu wahren, ohne den Sound zu flach klingen zu lassen.</p>
+                <h2><br>4. Referenz hören:</h2>
+                <p>Höre dir Musik von Künstlern im gleichen Genre an, um sicherzustellen, dass dein Sound konkurrenzfähig ist und gut ins Genre passt.</p>
+                <h2><br>5. Metadaten & Dateibenennung:</h2>
+                <p>Achte darauf, dass alle Metadaten korrekt sind (Songtitel, Künstlername, ISRC-Code) und die Dateinamen einheitlich benannt werden.</p>
+                <p><br>Bereite deine Musik in höchster Qualität vor, indem du auf Format, Lautstärke und Sound achtest und dich an Genre-Referenzen orientierst. Das sorgt für einen professionellen und konkurrenzfähigen Sound.</p>
+            </div>
+        </div>
+    </div>
+`,
+            zeitfresserSocial: `
+    <div class="post">
+        <h1>Zeitfresser Social Media – Mit Planung zur maximalen Kreativität</h1><br>
+        <div class="post-text">
+            <img src="socialfile.png">
+            <div class="text">
+                <p>Social Media kann schnell zu einem echten Zeitfresser werden. Jeden Tag neue Posts zu überlegen, kostet nicht nur Energie, sondern lenkt auch vom Wesentlichen ab – der Kunst. Die Lösung: eine durchdachte Planung! Wenn du für jedes Release im Voraus Content erstellst und diesen auch direkt planst, sparst du nicht nur Zeit, sondern steigert gleichzeitig deine Reichweite.</p>
+                <h2><br>Schritt-für-Schritt-Anleitung:</h2>
+                <h3>1. Content im Voraus produzieren:</h3>
+                <p>Plane für jedes Release, sei es eine Single, EP oder LP, alle nötigen Inhalte wie Lyric-Videos, Previews, Behind-the-Scenes-Material und Kommentar-Videos im Voraus. Eine Single kann hier z.B. sechs Wochen, eine EP mehrere Monate und eine LP sogar bis zu zwei Jahre vorausgeplant werden.</p>
+                <h3>2. Social-Media-Planungstools nutzen:</h3>
+                <p>Mit Tools wie Buffer oder Hootsuite kannst du die Posts für Wochen oder Monate vorab anlegen und zu den besten Zeiten automatisch veröffentlichen lassen. Das spart dir täglich Arbeit.</p>
+                <h3>3. Content gezielt auf verschiedenen Plattformen posten:</h3>
+                <p>Achte darauf, dass du für jede Plattform das passende Material verwendest. Instagram Stories oder TikTok eignen sich gut für kurze Clips, während YouTube und Facebook besser für längere Videos sind.</p>
+                <h3>4. Regelmäßig und in Häppchen posten:</h3>
+                <p>Verteile deine Inhalte in kleinen, regelmäßig veröffentlichten Happen über einen längeren Zeitraum. So bleibt das Interesse der Fans aufrecht und du bleibst konstant präsent.</p>
+            </div>
+        </div>
+    </div>
+`,
+            crossplatforming: `
+    <div class="post">
+        <h1>Crossplatforming – Maximale Reichweite durch unterschiedliches Timing</h1><br>
+        <div class="post-text">
+            <img src="socialfile.png">
+            <div class="text">
+                <p>Crossplatforming ist eine Strategie, bei der du deinen Content gezielt über mehrere Plattformen verteilst, ohne ihn zur selben Zeit überall zu posten. Zum Beispiel kannst du ein Lyric-Video, ein Commentary oder Behind-the-Scenes-Material auf unterschiedlichen Kanälen zu verschiedenen Zeiten veröffentlichen.</p>
+                <h2><br>Wie es funktioniert:</h2>
+                <ul>
+                    <li><strong>TikTok:</strong> Diese Woche veröffentlichst du die Single-Commentaries und gibst spannende Einblicke in den Entstehungsprozess.</li>
+                    <li><strong>YouTube Shorts:</strong> Währenddessen läuft auf YouTube das Behind-the-Scenes-Video, um deine Fans hinter die Kulissen blicken zu lassen.</li>
+                    <li><strong>Instagram:</strong> Anschließend kommt das Single-Commentary auf Instagram – und so weiter!</li>
+                </ul>
+                <h2><br>Warum das wichtig ist:</h2>
+                <p>Indem du deine Inhalte nicht gleichzeitig auf allen Plattformen postest, sorgst du dafür, dass die Zuschauer auf jeder Plattform etwas Neues sehen und nicht das gleiche Material zweimal hintereinander. Dies hält das Interesse hoch und bietet Abwechslung.</p>
+                <h2><br>Nutze möglichst viele Plattformen:</h2>
+                <p>Wichtig ist es auch, auf verschiedenen Plattformen aktiv zu sein. Du weißt nie, wann eine Plattform an Bedeutung verliert oder sich verändert. Vielleicht bricht eine App zusammen oder ändert ihren Algorithmus. Wenn du also breit aufgestellt bist, bist du flexibel und bleibst mit deiner Musik überall sichtbar.</p>
+                <h2><br>Tipp:</h2>
+                <p>Plane deinen Content so, dass du von der jeweiligen Plattform optimal profitieren kannst, ohne dass deine Fans das Gefühl haben, immer das Gleiche zu sehen. So bleibst du relevant und ansprechbar, egal, wie sich Social-Media-Landschaften verändern.</p>
+            </div>
+        </div>
+    </div>
+`,
+
+
+        // Hier weitere Artikel einfügen
+
+
+        // Quick-Tipps
+        tippBTS: `
+    <div class="post">
+        <h1>Quick-Tipp: Behind-the-Scenes (BTS) für mehr Authentizität und Content</h1><br>
+        <div class="post-text">
+            <img src="tippfile.png">
+            <div class="text">
+                <p>Nutze jede Produktionsphase, Probe oder jedes Treffen, um einfach eine Kamera mitlaufen zu lassen. Oft sind es die spontanen, ungefilterten Momente, die den wahren Charme eines Projekts zeigen und den Fans einen einzigartigen Blick hinter die Kulissen gewähren. Diese Aufnahmen müssen nicht sofort veröffentlicht werden – aber sie bieten eine Fülle an authentischem Material. Nach Stunden des Filmens kannst du oft die besten 2-3 Minuten heraussuchen und diese in kleine Häppchen auf Social Media teilen. So bekommst du viel Content mit minimalem Aufwand – ein echter Win-Win!</p>
+            </div>
+        </div>
+    </div>
+`,
+
+        };
+
+        // Artikel laden
+        document.querySelectorAll('.article-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const articleId = item.dataset.article;
+                document.getElementById('mainContent').innerHTML = articles[articleId];
+                window.location.hash = articleId;
+            });
+        });
+
+        // Hash-Loading
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (articles[hash]) {
+                document.getElementById('mainContent').innerHTML = articles[hash];
+            }
+        });
+
+        // Suchfunktion
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            document.querySelectorAll('.article-item').forEach(item => {
+                item.style.display = item.textContent.toLowerCase().includes(term) 
+                    ? 'block' 
+                    : 'none';
+            });
+        });
+
+        // Mobile Navigation
+        document.querySelector('.hamburger').addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        });
+
+        document.addEventListener('click', () => {
+            document.querySelector('.mobile-menu').classList.remove('active');
+        });
+    </script>
+</body>
+</html>

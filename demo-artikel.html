@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über uns - truecatspr</title>
+    <title>Demo-Artikel - truecatspr</title>
     <link rel="icon" type="image/x-icon" href="catfavicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Basis-Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Arial', sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
         }
 
         body {
@@ -26,7 +22,6 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            overflow-x: hidden;
         }
 
         .banner {
@@ -140,21 +135,41 @@
             font-size: 1.1em;
         }
 
-        .section {
-            margin-bottom: 3rem;
+        .post {
             background-color: #1a1a1a55;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        ul {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
+        .post img {
+            width: 152px;
+            height: 152px;
+            margin-right: 2rem;
+            border-radius: 10px;
+            object-fit: cover;
+            float: left;
         }
 
-        li {
-            margin-bottom: 0.5rem;
+        .post-text .text {
+            text-align: justify;
+            overflow: hidden;
+        }
+
+        .post-text .text ul {
+            margin-left: 20px;
+        }
+
+        .post-text .text ul li {
+            margin-bottom: 10px;
+        }
+
+        .post-text .text ol {
+            margin-left: 20px;
+        }
+
+        .post-text .text ol li {
+            margin-bottom: 10px;
         }
 
         footer {
@@ -264,29 +279,11 @@
                 display: flex;
             }
 
-            .content-container {
-                padding: 0 1rem;
-                margin: 1rem auto;
-            }
-
-            .section {
-                padding: 1rem;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h2 {
-                font-size: 1.4rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            ul {
-                margin-left: 1.5rem;
+            .post img {
+                float: none;
+                margin: 0 0 1rem 0;
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -309,70 +306,53 @@
                 width: 40px;
                 height: 40px;
             }
-
-            ul {
-                margin-left: 1rem;
-            }
-        }
-
-        @media (min-width: 1201px) {
-            .desktop-menu {
-                gap: 35px;
-            }
         }
     </style>
 </head>
 <body>
     <div class="banner">
-        <img src="banner2.jpeg" alt="Über uns Banner">
+        <img src="banner2.jpeg" alt="truecatspr Banner">
     </div>
 
     <nav>
         <div class="nav-container">
             <div class="desktop-menu">
                 <a href="index.html">Home</a>
-                <a href="about.html" class="active">Über uns</a>
-                <a href="services.html">Leistungen</a>
                 <a href="blog.html">Blog</a>
+                <a href="about.html">Über uns</a>
+                <a href="services.html">Leistungen</a>
                 <a href="contact.html">Kontakt</a>
             </div>
-
             <button class="hamburger">☰</button>
             <div class="mobile-menu">
                 <a href="index.html">Home</a>
-                <a href="about.html" class="active">Über uns</a>
-                <a href="services.html">Leistungen</a>
                 <a href="blog.html">Blog</a>
+                <a href="about.html">Über uns</a>
+                <a href="services.html">Leistungen</a>
                 <a href="contact.html">Kontakt</a>
             </div>
         </div>
     </nav>
 
     <div class="content-container">
-        <div class="section">
-            <h1>Über „truecatspr“</h1>
-            <p>„truecatspr“ ist ein unabhängiges Promo-Label, das Musikern hilft, ihre Karriere zu fördern und sie dabei mit kompetenter Beratung unterstützt. Ein kleines Team, das seine Erfahrung als Musiker und Unternehmer vereint, um Künstlern den Einstieg in die Musikbranche zu erleichtern.</p>
-        </div>
+        <div class="post">
+            <h1>Demo-Artikel: So funktioniert das System</h1>
+            <div class="post-text">
+                <img src="https://via.placeholder.com/152x152" alt="Demo-Bild">
+                <div class="text">
+                    <p>Dieser Artikel demonstriert die Funktionsweise des Systems.</p>
+                    
+                    <h2>Direkter Link Beispiel:</h2>
+                    <p>https://deine-website.de/demo-artikel.html</p>
 
-        <div class="section">
-            <h2>Unser Ziel</h2>
-            <p>Bei „truecatspr“ verfolgen wir eine klare Vision: Wir möchten eine lebendige, authentische und vielfältige Musiklandschaft fördern, in der Künstler ihre kreative Freiheit entfalten können und gleichzeitig die Anerkennung finden, die sie verdienen.</p>
-            <p>Wir glauben daran, dass die Musikwelt von neuen, unverfälschten Stimmen lebt. Unser Ziel ist es, diese Stimmen zu entdecken, zu fördern und an die richtigen Stellen zu bringen. Dabei setzen wir auf Authentizität und Qualität – denn nur so können wir sowohl den Künstlern als auch ihrem Publikum einen echten Mehrwert bieten.</p>
-            <p>Wir verstehen uns als Brückenbauer zwischen Künstlern und ihrer Zielgruppe. Durch gezielte Promotion und strategische Positionierung sorgen wir dafür, dass neue Musik genau dort ankommt, wo sie gehört werden soll. Dabei nutzen wir moderne Marketingkanäle und bewährte Methoden, um maximale Reichweite zu erzielen.</p>
-            <p>Unser Ansatz ist ganzheitlich: Wir wollen nicht nur den Künstlern helfen, ihre Karriere voranzutreiben, sondern auch dem Publikum einen echten Mehrwert bieten. Indem wir authentische Musik an die richtigen Stellen bringen, schaffen wir eine Verbindung zwischen Künstlern und ihrer Zielgruppe, die auf gegenseitigem Verständnis und Begeisterung basiert.</p>
-            <p>Unser Engagement endet nicht mit der Veröffentlichung eines Songs oder Albums. Wir begleiten unsere Künstler langfristig und helfen ihnen, sich in der Musikbranche zu etablieren. Dabei setzen wir auf nachhaltige Strategien, die nicht nur kurzfristige Erfolge, sondern auch langfristiges Wachstum ermöglichen.</p>
-        </div>
-
-        <div class="section">
-            <h2>Wie wir arbeiten</h2>
-            <p>Bei „truecatspr“ setzen wir auf einen transparenten, strukturierten und künstlerfreundlichen Ansatz. Unser Ziel ist es, Musikern den Rücken freizuhalten, damit sie sich voll und ganz auf ihre kreative Arbeit konzentrieren können. Hier erfährst du, wie wir das erreichen.</p>
-            <ul>
-                <li><strong>Individuelle Beratung:</strong> In einem ausführlichen Beratungsgespräch analysieren wir deine aktuelle Situation und entwickeln eine maßgeschneiderte Strategie.</li>
-                <li><strong>Professionelle Promotion:</strong> Wir übernehmen die gesamte Promotion für dich – von Social Media bis zu Playlist-Pitching.</li>
-                <li><strong>Kreativer Freiraum:</strong> Wir schaffen Raum für deine kreative Arbeit, indem wir die zeitaufwendige Selbstvermarktung übernehmen.</li>
-                <li><strong>Transparente Kommunikation:</strong> Du bleibst stets informiert über alle Schritte und Erfolge unserer Arbeit.</li>
-                <li><strong>Langfristige Partnerschaft:</strong> Wir begleiten dich langfristig und helfen dir, dich nachhaltig in der Musikbranche zu etablieren.</li>
-            </ul>
+                    <h3>Features:</h3>
+                    <ul>
+                        <li>Direkter Zugriff über URL</li>
+                        <li>Responsive Design</li>
+                        <li>Social Media kompatibel</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -395,16 +375,29 @@
                 <a href="https://bsky.app/profile/truecatspr.bsky.social" class="social-btn" target="_blank" rel="noopener">
                     <i class="fas fa-cloud"></i>
                 </a>
+                <a href="https://www.youtube.com/@truecatspr" class="social-btn" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@truecatspr" class="social-btn" target="_blank" rel="noopener">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://open.spotify.com/user/317fjhiyokxw232jy7get6x3wyxy" class="social-btn" target="_blank" rel="noopener">
+                    <i class="fab fa-spotify"></i>
+                </a>
             </div>
         </div>
     </footer>
 
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.querySelector('.mobile-menu');
+        document.querySelector('.hamburger').addEventListener('click', function(e) {
+            e.stopPropagation();
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('active');
+        });
 
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
+        document.addEventListener('click', function() {
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.remove('active');
         });
     </script>
 </body>
