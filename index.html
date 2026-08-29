@@ -3,358 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>truecatspr - Digital-PR & Musik-Promotion im Independent-Sektor</title>
-    <link rel="icon" type="image/x-icon" href="catfavicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>truecatspr</title>
     <style>
+        /* Grund-Einstellungen */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
         }
 
         body {
-            background-color: #2a2a2a;
-            color: #edaf42;
-            line-height: 1.6;
+            background-color: #1a1a1a; /* Dein gewünschter Hintergrund */
+            font-family: "Liberation Sans", Arial, sans-serif; /* Deine gewünschte Font */
+            color: #ffffff;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
         }
 
+        /* Banner-Bereich ganz oben */
         .banner {
             width: 100%;
-            height: 200px;
-            background: #1f1f1f;
+            display: flex;
+            justify-content: center; /* Zentriert das gesamte Logo-Text-Paket horizontal */
+            align-items: center;     /* Zentriert Logo und Text vertikal zueinander */
+            padding: 40px 20px;      /* Abstand nach oben und unten */
+        }
+
+        .logo-wrapper {
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 20px; /* Abstand zwischen Logo und Text */
         }
 
-        .banner img {
-            max-height: 180px;
-            max-width: 100%;
-            height: auto;
-            padding: 20px;
+        .logo-img {
+            height: 120px; /* Größe des Logos - kannst du nach Belieben anpassen */
+            width: auto;
         }
 
-        nav {
-            background-color: #1f1f1f;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #edaf4233;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .desktop-menu {
-            display: flex;
-            gap: 25px;
-        }
-
-        .desktop-menu a {
-            color: #edaf42;
-            text-decoration: none;
-            padding: 0.8rem 1.2rem;
-            transition: all 0.3s ease;
-            border-radius: 5px;
-            text-transform: uppercase;
-            font-size: 0.85em;
-            letter-spacing: 1px;
-        }
-
-        .desktop-menu a:hover, .desktop-menu a.active {
-            background-color: #edaf42;
-            color: #2a2a2a;
-        }
-
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            color: #edaf42;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            background: #1f1f1f;
-            width: 100%;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            padding: 1rem;
-            z-index: 999;
-            border-bottom: 2px solid #edaf42;
-        }
-
-        .mobile-menu.active { display: flex; }
-
-        .mobile-menu a {
-            color: #edaf42;
-            text-decoration: none;
-            padding: 1rem;
-            text-transform: uppercase;
-            border-bottom: 1px solid #edaf4222;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(180deg, #1f1f1f 0%, #2a2a2a 100%);
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            border: none;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            color: #ccc;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #edaf42;
-            color: #2a2a2a;
-            padding: 1rem 2rem;
-            text-decoration: none;
+        .brand-name {
+            font-size: 5rem; /* Schön groß wie gewünscht */
             font-weight: bold;
-            border-radius: 5px;
-            text-transform: uppercase;
-            transition: transform 0.3s;
+            letter-spacing: -2px; /* Wirkt bei großen Schriftzügen oft moderner */
+            line-height: 1;
         }
 
-        .cta-button:hover { transform: scale(1.05); }
-
-        /* Content Sections */
-        .content-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+        /* Farbspezifikation für den Markennamen */
+        .truecats {
+            color: #ffffff; /* Weiß */
         }
 
-        .section {
-            margin-bottom: 4rem;
-            padding: 2rem;
-            background-color: #1a1a1a55;
-            border-radius: 10px;
-            border-left: 4px solid #edaf42;
+        .pr {
+            color: #edaf42; /* Dein Gold-Ton */
         }
 
-        h2 {
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 2rem;
-        }
-
-        .service-card {
-            background: #1f1f1f;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #edaf4233;
-            transition: 0.3s;
-        }
-
-        .service-card:hover { border-color: #edaf42; }
-
-        .service-card h3 { margin-bottom: 0.5rem; color: #fff; }
-        .price-tag {
-            display: block;
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .service-card ul {
-            list-style: none;
-            font-size: 0.9rem;
-            color: #bbb;
-        }
-
-        .service-card ul li i { color: #edaf42; margin-right: 5px; }
-
-        footer {
-            background-color: #1a1a1a;
-            color: #edaf42;
-            padding: 2rem;
-            border-top: 1px solid #edaf4233;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        .social-bar { display: flex; gap: 15px; }
-
-        .social-btn {
-            background-color: #1a1a1a;
-            color: #edaf42;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.3s;
-            border: 1px solid #edaf4233;
-            text-decoration: none;
-        }
-
-        .social-btn:hover { background-color: #edaf42; color: #2a2a2a; }
-
+        /* Responsive Anpassung für kleinere Bildschirme */
         @media (max-width: 768px) {
-            .desktop-menu { display: none; }
-            .hamburger { display: block; }
-            .hero h1 { font-size: 1.8rem; }
+            .brand-name {
+                font-size: 3rem;
+            }
+            .logo-img {
+                height: 80px;
+            }
+            .logo-wrapper {
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="banner">
-        <img src="banner2.jpeg" alt="truecatspr Banner">
-    </div>
 
-    <nav>
-        <div class="nav-container">
-            <div class="desktop-menu">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">Über uns</a>
-                <a href="services.html">Leistungen</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Kontakt</a>
-            </div>
-            <button class="hamburger">☰</button>
-            <div class="mobile-menu">
-                <a href="index.html">Home</a>
-                <a href="about.html">Über uns</a>
-                <a href="services.html">Leistungen</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Kontakt</a>
+    <header class="banner">
+        <div class="logo-wrapper">
+            <!-- Das Logo auf der linken Seite -->
+            <img src="TCPRLogoTransparent.png" alt="TCPR Logo" class="logo-img">
+            
+            <!-- Der Name rechts daneben -->
+            <div class="brand-name">
+                <span class="truecats">truecats</span><span class="pr">pr</span>
             </div>
         </div>
-    </nav>
-
-    <header class="hero">
-        <h1>Deine Musik verdient mehr als nur einen <span style="color:#fff">Release-Tag.</span></h1>
-        <p>Wir schließen die Lücke zwischen hochwertiger Musikproduktion und digitaler Sichtbarkeit. Professionelle PR & Content-Recycling für Independent-Artists.</p>
-        <a href="#pakete" class="cta-button">Leistungen ansehen</a>
     </header>
 
-    <div class="content-container">
-        
-        <div class="section">
-            <h2>Warum truecatspr?</h2>
-            <p>In einer Welt, in der täglich 100.000 neue Tracks erscheinen, reicht "gute Musik" nicht mehr aus. Wir helfen dir, aus deinem Rohmaterial (Stems, Studio-Szenen, Bio) eine konsistente mediale Präsenz zu schaffen.</p>
-            <p><strong>Unser Fokus:</strong> Digitale PR, effizientes Content-Recycling (Short-Videos) und echtes Kuratoren-Pitching – ohne Fake-Streams oder versteckte Kosten.</p>
-        </div>
-
-        <div id="pakete" class="section" style="border-left-color: #fff;">
-            <h2>Service-Pakete</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>EPK "Compact"</h3>
-                    <span class="price-tag">99,00 €</span>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Professionelle Bio</li>
-                        <li><i class="fas fa-check"></i> Pressetexte</li>
-                        <li><i class="fas fa-check"></i> Asset-Strukturierung</li>
-                    </ul>
-                </div>
-                <div class="service-card" style="border-color: #edaf42;">
-                    <h3>Single-Kampagne</h3>
-                    <span class="price-tag">350,00 €</span>
-                    <ul>
-                        <li><i class="fas fa-check"></i> EPK & Pressetexte</li>
-                        <li><i class="fas fa-check"></i> 10-12 Kurzvideos (Snippets)</li>
-                        <li><i class="fas fa-check"></i> Playlist-Pitching</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>EP-Kampagne</h3>
-                    <span class="price-tag">750,00 €</span>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Mehrwöchige Betreuung</li>
-                        <li><i class="fas fa-check"></i> Content-Flow Strategie</li>
-                        <li><i class="fas fa-check"></i> Erweitertes Pitching</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>A&R & Partnerschaft</h2>
-            <p>Du hast herausragendes Talent, aber kein Budget für eine Kampagne? Wir scouten aktiv nach High-Potential-Acts für unser <strong>Beteiligungsmodell</strong>.</p>
-            <p>0 € Vorabkosten – wir investieren unsere Arbeit gegen eine prozentuale Beteiligung an künftigen Erlösen. Qualität entscheidet.</p>
-            <a href="contact.html" class="cta-button" style="background: none; border: 1px solid #edaf42; color: #edaf42; margin-top: 1rem;">Jetzt Material einreichen</a>
-        </div>
-
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-left">
-                <div style="margin-bottom: 10px;">
-                    <a href="impressum.html" style="color: #edaf4280; text-decoration: none; font-size: 0.8rem; margin-right: 15px;">Impressum</a>
-                    <a href="newsletter.html" style="color: #edaf4280; text-decoration: none; font-size: 0.8rem;">Newsletter</a>
-                </div>
-                <p class="copyright">&copy; 2026 truecatspr UG (haftungsbeschränkt). Alle Rechte vorbehalten.</p>
-            </div>
-            <div class="social-bar">
-                <a href="https://www.instagram.com/truecatspr/" class="social-btn" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@truecatspr" class="social-btn" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://open.spotify.com/user/317fjhiyokxw232jy7get6x3wyxy" class="social-btn" target="_blank"><i class="fab fa-spotify"></i></a>
-                <a href="https://www.youtube.com/@truecatspr" class="social-btn" target="_blank"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelector('.hamburger').addEventListener('click', function(e) {
-            e.stopPropagation();
-            document.querySelector('.mobile-menu').classList.toggle('active');
-        });
-
-        document.addEventListener('click', function() {
-            document.querySelector('.mobile-menu').classList.remove('active');
-        });
-    </script>
 </body>
 </html>
