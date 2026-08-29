@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>truecatspr - About Us & Philosophy</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../Assets/TCprLogo.ico"> 
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <canvas id="bg-visualizer"></canvas>
+
+    <!-- Utility Bar: Socials + Language -->
+    <div class="utility-bar">
+        <div class="social-icons-top">
+            <a href="https://www.instagram.com/truecatspr/" target="_blank" aria-label="Instagram"><img src="../Assets/icon_instagram.png" alt="IG"></a>
+            <a href="https://www.tiktok.com/@truecatspr" target="_blank" aria-label="TikTok"><img src="../Assets/icon_tiktok.png" alt="TT"></a>
+            <a href="https://open.spotify.com/user/317fjhiyokxw232jy7get6x3wyxy" target="_blank" aria-label="Spotify"><img src="../Assets/icon_spotify.png" alt="SP"></a>
+            <a href="https://www.youtube.com/@truecatspr" target="_blank" aria-label="YouTube"><img src="../Assets/icon_youtube.png" alt="YT"></a>
+            <a href="https://bsky.app/profile/truecatspr.bsky.social" target="_blank" aria-label="Bluesky"><img src="../Assets/icon_bluesky.png" alt="BS"></a>
+        </div>
+        <div class="controls-container">
+            <div class="lang-switch">
+                <span id="lang-en" class="active">EN</span> | <span id="lang-de">DE</span>
+            </div>
+            <div class="theme-switch" id="theme-toggle">
+                <span id="theme-text">LIGHT MODE</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Header: Logo NEBEN Text -->
+    <header class="header-banner">
+        <a href="../index.html" class="logo-link">
+            <div class="logo-container">
+                <picture>
+                    <source srcset="../Assets/TCPRLogoTransparentLight.png" media="(prefers-color-scheme: light)">
+                    <img src="../Assets/TCPRLogoTransparentDark.png" alt="TCPR Logo" class="logo-img">
+                </picture>
+                <div class="logo-text">
+                    <span class="tc-white">truecats</span><span class="tc-gold">pr</span>
+                </div>
+            </div>
+        </a>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav-services">Packages</a></li>
+            <li><a href="how-it-works.html" data-i18n="nav-how">How it works</a></li>
+            <li><a href="about.html" data-i18n="nav-about">About Us</a></li>
+            <li><a href="contact.html" data-i18n="nav-contact">Contact & Submission</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 data-i18n="about-headline">About Us</h1>
+            <p data-i18n="about-sub">Independent music needs more than algorithmic noise. It needs a voice, a strategy, and professional execution.</p>
+        </section>
+
+        <!-- Mission Statement -->
+        <section class="info-box" style="margin-bottom: 50px; text-align: left;">
+            <h2 data-i18n="mission-title">The truecatspr Mission</h2>
+            <p data-i18n="mission-text">Founded as truecatspr, our agency bridges the gap for independent artists and labels. In an era where digital distribution is globally accessible, standing out requires more than just uploading tracks. We combine classical editorial PR, compelling press texts, and targeted playlist pitching with modern digital content-recycling to build authentic, long-term audience traction.</p>
+        </section>
+
+        <!-- Team Section -->
+        <section class="info-grid" style="margin-bottom: 50px;">
+            <div class="info-box">
+                <h2 data-i18n="team-markus-title">Markus Tobias Buchwalder</h2>
+                <p style="color: var(--gold); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; font-weight: bold;" data-i18n="team-markus-sub">Managing Director & Operations</p>
+                <p data-i18n="team-markus-text">As the primary operational director, Markus steers day-to-day campaign work, music promotion, content snipping, online marketing, and direct artist guidance. His deep focus lies on shaping creative assets and positioning independent talent effectively in the digital landscape.</p>
+            </div>
+            <div class="info-box">
+                <h2 data-i18n="team-holger-title">Holger Gechter</h2>
+                <p style="color: var(--gold); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; font-weight: bold;" data-i18n="team-holger-sub">Co-Founder & Administration / Legal</p>
+                <p data-i18n="team-holger-text">Bringing over 20 years of robust entrepreneurial experience in sales and business structure, Holger oversees the administrative, legal, and contractual frameworks (including service agreements and transparent terms) to guarantee absolute reliability and safety for all partners.</p>
+            </div>
+        </section>
+
+        <!-- Philosophy / Two-Layer Principle -->
+        <section class="info-box" style="margin-bottom: 80px; border-left: none; border-right: 3px solid var(--gold); text-align: right;">
+            <h2 data-i18n="philo-title">The Two-Layer Principle</h2>
+            <p data-i18n="philo-text">Our strength lies in a seamless division of labor: creative PR execution meets seasoned commercial oversight. This ensures that every campaign is not only culturally and musically sharp, but also legally and structurally sound from day one.</p>
+        </section>
+    </main>
+
+    <footer class="footer-note">
+        <p data-i18n="footer-desc">Editorial & Digital PR Agency for the Independent Music Sector.</p>
+        <div style="margin: 15px 0;">
+            <a href="impressum.html" data-i18n="nav-imprint">Imprint</a> | 
+            <a href="datenschutz.html" data-i18n="nav-privacy">Privacy</a>
+        </div>
+        <p>&copy; 2026 truecatspr. <span data-i18n="footer-rights">All rights reserved.</span></p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

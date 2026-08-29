@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>truecatspr - Packages & Pricing</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../Assets/TCprLogo.ico"> 
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <canvas id="bg-visualizer"></canvas>
+
+    <!-- Utility Bar: Socials + Language -->
+    <div class="utility-bar">
+        <div class="social-icons-top">
+            <a href="https://www.instagram.com/truecatspr/" target="_blank" aria-label="Instagram"><img src="../Assets/icon_instagram.png" alt="IG"></a>
+            <a href="https://www.tiktok.com/@truecatspr" target="_blank" aria-label="TikTok"><img src="../Assets/icon_tiktok.png" alt="TT"></a>
+            <a href="https://open.spotify.com/user/317fjhiyokxw232jy7get6x3wyxy" target="_blank" aria-label="Spotify"><img src="../Assets/icon_spotify.png" alt="SP"></a>
+            <a href="https://www.youtube.com/@truecatspr" target="_blank" aria-label="YouTube"><img src="../Assets/icon_youtube.png" alt="YT"></a>
+            <a href="https://bsky.app/profile/truecatspr.bsky.social" target="_blank" aria-label="Bluesky"><img src="../Assets/icon_bluesky.png" alt="BS"></a>
+        </div>
+        <div class="controls-container">
+            <div class="lang-switch">
+                <span id="lang-en" class="active">EN</span> | <span id="lang-de">DE</span>
+            </div>
+            <div class="theme-switch" id="theme-toggle">
+                <span id="theme-text">LIGHT MODE</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header: Logo NEBEN Text -->
+    <header class="header-banner">
+        <a href="../index.html" class="logo-link">
+            <div class="logo-container">
+                <picture>
+                    <source srcset="../Assets/TCPRLogoTransparentLight.png" media="(prefers-color-scheme: light)">
+                    <img src="../Assets/TCPRLogoTransparentDark.png" alt="TCPR Logo" class="logo-img">
+                </picture>
+                <div class="logo-text">
+                    <span class="tc-white">truecats</span><span class="tc-gold">pr</span>
+                </div>
+            </div>
+        </a>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav-services">Packages</a></li>
+            <li><a href="how-it-works.html" data-i18n="nav-how">How it works</a></li>
+            <li><a href="about.html" data-i18n="nav-about">About Us</a></li>
+            <li><a href="contact.html" data-i18n="nav-contact">Contact & Submission</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 data-i18n="serv-headline">Transparent Fixed-Price Packages</h1>
+            <p data-i18n="serv-sub">End the weekly content panic. We translate your raw artistic output into a structured, compelling, and professional multi-channel campaign.</p>
+        </section>
+
+        <!-- Pricing Grid -->
+        <section class="competence-grid">
+            <div class="comp-card">
+                <h3 data-i18n="pkg-1-title">EPK Creation & Social Foundation</h3>
+                <p style="color: var(--gold); font-weight: bold; font-size: 1.2rem; margin-bottom: 15px;" data-i18n="pkg-1-price">99.00 €</p>
+                <p data-i18n="pkg-1-features" style="text-align: left; line-height: 1.6;">
+                    • Professional digital Electronic Press Kit (EPK) setup based on strict editorial guidelines.<br>
+                    • Complete cleanup and re-structuring of your artist bio and online footprint so your channels stop looking amateurish.<br>
+                    • Essential copy-writing and asset formatting for your independent outreach.
+                </p>
+            </div>
+
+            <div class="comp-card" style="border-color: var(--gold);">
+                <h3 data-i18n="pkg-2-title">Single Campaign</h3>
+                <p style="color: var(--gold); font-weight: bold; font-size: 1.2rem; margin-bottom: 15px;" data-i18n="pkg-2-price">350.00 €</p>
+                <p data-i18n="pkg-2-features" style="text-align: left; line-height: 1.6;">
+                    • Complete pre-release content architecture mapped precisely to your single's drop date.<br>
+                    • **Asset Processing:** We take your raw single files, lyric sheets, or lyric videos and slice them into engaging, high-retention short-form assets for TikTok and Instagram Reels.<br>
+                    • Professional press release writing and targeted distribution to independent outlets.<br>
+                    • Full pre-loading of your social media planners for a stress-free release week.
+                </p>
+            </div>
+
+            <div class="comp-card">
+                <h3 data-i18n="pkg-3-title">EP Campaign</h3>
+                <p style="color: var(--gold); font-weight: bold; font-size: 1.2rem; margin-bottom: 15px;" data-i18n="pkg-3-price">750.00 €</p>
+                <p data-i18n="pkg-3-features" style="text-align: left; line-height: 1.6;">
+                    • Multi-track promotion spanning 4 to 5 structured release phases to keep momentum high without audience fatigue.<br>
+                    • **Direct Editorial Pitching:** Intensive manual outreach to genre-specific music blogs, webzines, and digital tastemakers.<br>
+                    • Deep asset restructuring: Combining studio behind-the-scenes material, track-by-track insights, and multi-format video snippets.<br>
+                    • Sustained social planner management and direct playlist curator pitching support.
+                </p>
+            </div>
+
+            <div class="comp-card">
+                <h3 data-i18n="pkg-4-title">Album Campaign</h3>
+                <p style="color: var(--gold); font-weight: bold; font-size: 1.2rem; margin-bottom: 15px;" data-i18n="pkg-4-price">1,500.00 €</p>
+                <p data-i18n="pkg-4-features" style="text-align: left; line-height: 1.6;">
+                    • Full-scale, comprehensive rollout covering 6–8 pre-release singles plus the ultimate album drop.<br>
+                    • **Maximum Substance & Narrative Building:** Continuous stream of rich material—lyric videos, deep-dive track commentaries, high-end studio bts, and artist statements.<br>
+                    • Long-term architecture ensuring your social channels remain saturated and engaging over the entire campaign cycle.<br>
+                    • Heavy press outreach, feature placement efforts, and maximum artistic visibility.
+                </p>
+            </div>
+        </section>
+
+        <!-- Deep-Dive / Process Section -->
+        <section class="info-box" style="margin-bottom: 80px;">
+            <h2 data-i18n="serv-addon-title">The Philosophy: From Chaos to Campaign</h2>
+            <p data-i18n="serv-addon-text" style="line-height: 1.6;">
+                Most independent artists fail not because of their music, but because of the exhausting <strong>weekly content panic</strong>—scrambling for posts on release day and going silent right after.<br><br>
+                <strong>How we fix it:</strong> You drop your raw assets (audio stems, rough video clips, lyric sheets, photos) into our comprehensive submission pipeline just once. We take that raw material, process it into a professional narrative, build out your schedule, write the copy, and execute the PR outreach. You keep 100% creative control while we handle the operational heavy lifting.
+            </p>
+            <div style="margin-top: 25px;">
+                <a href="contact.html" class="btn-primary" data-i18n="btn-submit">Submit Material & Inquire Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-note">
+        <p data-i18n="footer-desc">Editorial & Digital PR Agency for the Independent Music Sector.</p>
+        <div style="margin: 15px 0;">
+            <a href="impressum.html" data-i18n="nav-imprint">Imprint</a> | 
+            <a href="datenschutz.html" data-i18n="nav-privacy">Privacy</a>
+        </div>
+        <p>&copy; 2026 truecatspr. <span data-i18n="footer-rights">All rights reserved.</span></p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

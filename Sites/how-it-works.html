@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>truecatspr - How it works</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../Assets/TCprLogo.ico"> 
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <canvas id="bg-visualizer"></canvas>
+
+    <!-- Utility Bar: Socials + Language -->
+    <div class="utility-bar">
+        <div class="social-icons-top">
+            <a href="https://www.instagram.com/truecatspr/" target="_blank" aria-label="Instagram"><img src="../Assets/icon_instagram.png" alt="IG"></a>
+            <a href="https://www.tiktok.com/@truecatspr" target="_blank" aria-label="TikTok"><img src="../Assets/icon_tiktok.png" alt="TT"></a>
+            <a href="https://open.spotify.com/user/317fjhiyokxw232jy7get6x3wyxy" target="_blank" aria-label="Spotify"><img src="../Assets/icon_spotify.png" alt="SP"></a>
+            <a href="https://www.youtube.com/@truecatspr" target="_blank" aria-label="YouTube"><img src="../Assets/icon_youtube.png" alt="YT"></a>
+            <a href="https://bsky.app/profile/truecatspr.bsky.social" target="_blank" aria-label="Bluesky"><img src="../Assets/icon_bluesky.png" alt="BS"></a>
+        </div>
+        <div class="controls-container">
+            <div class="lang-switch">
+                <span id="lang-en" class="active">EN</span> | <span id="lang-de">DE</span>
+            </div>
+            <div class="theme-switch" id="theme-toggle">
+                <span id="theme-text">LIGHT MODE</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header: Logo NEBEN Text -->
+    <header class="header-banner">
+        <a href="../index.html" class="logo-link">
+            <div class="logo-container">
+                <picture>
+                    <source srcset="../Assets/TCPRLogoTransparentLight.png" media="(prefers-color-scheme: light)">
+                    <img src="../Assets/TCPRLogoTransparentDark.png" alt="TCPR Logo" class="logo-img">
+                </picture>
+                <div class="logo-text">
+                    <span class="tc-white">truecats</span><span class="tc-gold">pr</span>
+                </div>
+            </div>
+        </a>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav-services">Packages</a></li>
+            <li><a href="how-it-works.html" data-i18n="nav-how">How it works</a></li>
+            <li><a href="about.html" data-i18n="nav-about">About Us</a></li>
+            <li><a href="contact.html" data-i18n="nav-contact">Contact & Submission</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 data-i18n="how-headline">How It Works</h1>
+            <p data-i18n="how-sub">From your first message to a targeted campaign. Here is how we evaluate, coordinate, and execute your music promotion.</p>
+        </section>
+
+        <!-- Prozess-Schritte (Grid) -->
+        <section class="competence-grid" style="margin-bottom: 80px;">
+            <div class="comp-card">
+                <h3 data-i18n="step-1-title">1. Initial Contact & Submission</h3>
+                <p data-i18n="step-1-text">You reach out to us, sending your EPK (if available), website, social media links, or audio material for review.</p>
+            </div>
+            <div class="comp-card">
+                <h3 data-i18n="step-2-title">2. Editorial Review & Offer</h3>
+                <p data-i18n="step-2-text">We manually review your material. If it fits, you receive a tailored promotion offer; if not, you get constructive feedback with tips so your next application hits the mark.</p>
+            </div>
+            <div class="comp-card">
+                <h3 data-i18n="step-3-title">3. Material List & Deadline</h3>
+                <p data-i18n="step-3-text">Once we agree on a package, you receive our detailed material checklist. As soon as all required assets arrive completely and on time, we start.</p>
+            </div>
+            <div class="comp-card">
+                <h3 data-i18n="step-4-title">4. Production & PR Execution</h3>
+                <p data-i18n="step-4-text">We roll out your campaign: EPK creation, video content snipping, and strategic media pitching while you focus on your music.</p>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="hero-btns" style="padding-bottom: 80px;">
+            <a href="contact.html" class="btn-primary" data-i18n="btn-submit">Get in Touch & Submit Material</a>
+        </section>
+    </main>
+
+    <footer class="footer-note">
+        <p data-i18n="footer-desc">Editorial & Digital PR Agency for the Independent Music Sector.</p>
+        <div style="margin: 15px 0;">
+            <a href="impressum.html" data-i18n="nav-imprint">Imprint</a> | 
+            <a href="datenschutz.html" data-i18n="nav-privacy">Privacy</a>
+        </div>
+        <p>&copy; 2026 truecatspr. <span data-i18n="footer-rights">All rights reserved.</span></p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
