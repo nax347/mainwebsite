@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>truecatspr</title>
+    <title>truecatspr - Digital-PR & Musikpromotion</title>
     <style>
-        /* Grund-Einstellungen */
+        /* Grund-Einstellungen & Font */
         * {
             margin: 0;
             padding: 0;
@@ -13,75 +13,149 @@
         }
 
         body {
-            background-color: #1a1a1a; /* Dein gewünschter Hintergrund */
-            font-family: "Liberation Sans", Arial, sans-serif; /* Deine gewünschte Font */
-            color: #ffffff;
-            min-height: 100vh;
+            background-color: #1a1a1a;
+            font-family: "Liberation Sans", Arial, sans-serif;
+            color: #888633; /* Dein spezifischer Normaltext-Ton */
+            line-height: 1.6;
         }
 
-        /* Banner-Bereich ganz oben */
-        .banner {
+        /* Banner-Bereich (Logo & Schriftzug) */
+        .header-banner {
             width: 100%;
             display: flex;
-            justify-content: center; /* Zentriert das gesamte Logo-Text-Paket horizontal */
-            align-items: center;     /* Zentriert Logo und Text vertikal zueinander */
-            padding: 40px 20px;      /* Abstand nach oben und unten */
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
         }
 
-        .logo-wrapper {
+        .logo-container {
             display: flex;
             align-items: center;
-            gap: 20px; /* Abstand zwischen Logo und Text */
+            gap: 20px;
         }
 
         .logo-img {
-            height: 120px; /* Größe des Logos - kannst du nach Belieben anpassen */
+            height: 100px; /* Größe des Logos */
             width: auto;
         }
 
-        .brand-name {
-            font-size: 5rem; /* Schön groß wie gewünscht */
-            font-weight: bold;
-            letter-spacing: -2px; /* Wirkt bei großen Schriftzügen oft moderner */
+        .logo-text {
+            font-size: 4.5rem; /* Großer, prägnanter Schriftzug */
+            font-weight: bold; /* Schriftzug in BOLD */
+            letter-spacing: -1.5px;
             line-height: 1;
         }
 
-        /* Farbspezifikation für den Markennamen */
-        .truecats {
-            color: #ffffff; /* Weiß */
+        .logo-text .white { color: #ffffff; }
+        .logo-text .gold { color: #edaf42; }
+
+        /* Navigation */
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            margin-bottom: 40px;
         }
 
-        .pr {
-            color: #edaf42; /* Dein Gold-Ton */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
         }
 
-        /* Responsive Anpassung für kleinere Bildschirme */
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff; /* Reiter in weiß für gute Sichtbarkeit */
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #edaf42;
+        }
+
+        /* Hauptinhalt */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #ffffff; /* Überschriften Weiß */
+            font-weight: bold; /* Überschriften Fett */
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #888633; /* Normaler Text */
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Fußnoten / Versteckter Text */
+        .footer-note {
+            color: #666666; /* Kleinerer, grauer Text */
+            font-size: 0.8rem;
+            margin-top: 50px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        /* Mobile Anpassung */
         @media (max-width: 768px) {
-            .brand-name {
-                font-size: 3rem;
-            }
-            .logo-img {
-                height: 80px;
-            }
-            .logo-wrapper {
-                gap: 10px;
-            }
+            .logo-text { font-size: 2.5rem; }
+            .logo-img { height: 60px; }
+            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
         }
     </style>
 </head>
 <body>
 
-    <header class="banner">
-        <div class="logo-wrapper">
-            <!-- Das Logo auf der linken Seite -->
+    <!-- Banner Sektion -->
+    <header class="header-banner">
+        <div class="logo-container">
+            <!-- Das Logo links -->
             <img src="TCPRLogoTransparent.png" alt="TCPR Logo" class="logo-img">
             
-            <!-- Der Name rechts daneben -->
-            <div class="brand-name">
-                <span class="truecats">truecats</span><span class="pr">pr</span>
+            <!-- Der Schriftzug rechts daneben -->
+            <div class="logo-text">
+                <span class="white">truecats</span><span class="gold">pr</span>
             </div>
         </div>
     </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Leistungen</a></li>
+            <li><a href="guide.html">Künstler-Guide</a></li>
+            <li><a href="about.html">Über uns</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Erste Sektion (Beispielinhalt passend zu den Farben) -->
+    <main class="main-content">
+        <h1>Echte Promotion für echte Musik.</h1>
+        <p>Wir schließen die Lücke zwischen deiner Produktion und der digitalen Sichtbarkeit. Spezialisierte Musik-PR im Independent-Sektor.</p>
+        
+        <!-- Fußnote / Versteckter Text -->
+        <div class="footer-note">
+            &copy; 2026 truecatspr UG (haftungsbeschränkt). Alle Rechte vorbehalten. <br>
+            Informationen gemäß § 5 TMG finden Sie im Impressum.
+        </div>
+    </main>
 
 </body>
 </html>
