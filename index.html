@@ -13,9 +13,10 @@
         }
 
         body {
-            background-color: #1a1a1a;
+            /* FIX: Nur 6 Stellen für volles, dunkles Anthrazit */
+            background-color: #1a1a1a; 
             font-family: "Liberation Sans", Arial, sans-serif;
-            color: #888633; /* Dein spezifischer Normaltext-Ton */
+            color: #888633; 
             line-height: 1.6;
         }
 
@@ -25,25 +26,25 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         .logo-img {
-            height: 100px; /* Größe des Logos */
+            height: 110px; 
             width: auto;
         }
 
         .logo-text {
-            font-size: 4.5rem; /* Großer, prägnanter Schriftzug */
-            font-weight: bold; /* Schriftzug in BOLD */
+            font-size: 4.8rem; 
+            font-weight: bold; 
             letter-spacing: -1.5px;
-            line-height: 1;
+            line-height: 0.9;
         }
 
         .logo-text .white { color: #ffffff; }
@@ -54,25 +55,25 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            padding: 15px 0;
-            border-top: 1px solid #333;
-            border-bottom: 1px solid #333;
-            margin-bottom: 40px;
+            padding: 20px 0;
+            border-top: 1px solid #2a2a2a; /* Etwas dunklere Trenner für den dunklen Background */
+            border-bottom: 1px solid #2a2a2a;
+            margin-bottom: 50px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 35px;
+            gap: 40px;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #ffffff; /* Reiter in weiß für gute Sichtbarkeit */
+            color: #ffffff; 
             font-weight: bold;
             text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
             transition: color 0.3s ease;
         }
 
@@ -82,59 +83,56 @@
 
         /* Hauptinhalt */
         .main-content {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
             text-align: center;
         }
 
-        h1, h2, h3 {
-            color: #ffffff; /* Überschriften Weiß */
-            font-weight: bold; /* Überschriften Fett */
-            margin-bottom: 1.5rem;
+        h1, h2 {
+            color: #ffffff; 
+            font-weight: bold;
+            margin-bottom: 2rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         p {
-            color: #888633; /* Normaler Text */
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
+            color: #888633; 
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
 
         /* Fußnoten / Versteckter Text */
         .footer-note {
-            color: #666666; /* Kleinerer, grauer Text */
+            color: #666666; 
             font-size: 0.8rem;
-            margin-top: 50px;
-            border-top: 1px solid #333;
-            padding-top: 20px;
+            margin-top: 80px;
+            border-top: 1px solid #2a2a2a;
+            padding-top: 30px;
             text-align: center;
+            line-height: 1.5;
         }
 
         /* Mobile Anpassung */
         @media (max-width: 768px) {
-            .logo-text { font-size: 2.5rem; }
-            .logo-img { height: 60px; }
-            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            .logo-text { font-size: 2.8rem; }
+            .logo-img { height: 70px; }
+            .nav-links { gap: 20px; flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Banner Sektion -->
     <header class="header-banner">
         <div class="logo-container">
-            <!-- Das Logo links -->
             <img src="TCPRLogoTransparent.png" alt="TCPR Logo" class="logo-img">
-            
-            <!-- Der Schriftzug rechts daneben -->
             <div class="logo-text">
                 <span class="white">truecats</span><span class="gold">pr</span>
             </div>
         </div>
     </header>
 
-    <!-- Navigation -->
     <nav>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -145,12 +143,10 @@
         </ul>
     </nav>
 
-    <!-- Erste Sektion (Beispielinhalt passend zu den Farben) -->
     <main class="main-content">
         <h1>Echte Promotion für echte Musik.</h1>
         <p>Wir schließen die Lücke zwischen deiner Produktion und der digitalen Sichtbarkeit. Spezialisierte Musik-PR im Independent-Sektor.</p>
         
-        <!-- Fußnote / Versteckter Text -->
         <div class="footer-note">
             &copy; 2026 truecatspr UG (haftungsbeschränkt). Alle Rechte vorbehalten. <br>
             Informationen gemäß § 5 TMG finden Sie im Impressum.
