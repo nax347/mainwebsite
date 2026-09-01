@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>truecatspr - Editorial & Digital PR for Independent Music</title>
-    <!-- Favicon: Pfad und Typ korrigiert -->
-    <link rel="icon" type="image/x-icon" href="Assets/TCprLogo.ico"> 
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>truecatspr – Launching 2027</title>
+    <link rel="icon" type="image/x-icon" href="Assets/TCprLogo.ico" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <canvas id="bg-visualizer"></canvas>
 
-    <!-- Utility Bar: Socials + Language -->
+    <!-- Utility Bar: Socials + Language + Theme (bleibt) -->
     <div class="utility-bar">
         <div class="social-icons-top">
-            <a href="https://www.instagram.com/truecatspr/" target="_blank" aria-label="Instagram"><img src="Assets/icon_instagram.png" alt="IG"></a>
-            <a href="https://www.tiktok.com/@truecatspr" target="_blank" aria-label="TikTok"><img src="Assets/icon_tiktok.png" alt="TT"></a>
-            <a href="https://open.spotify.com/user/317fjhiyokxw232jy7get6x3wyxy" target="_blank" aria-label="Spotify"><img src="Assets/icon_spotify.png" alt="SP"></a>
-            <a href="https://www.youtube.com/@truecatspr" target="_blank" aria-label="YouTube"><img src="Assets/icon_youtube.png" alt="YT"></a>
-            <a href="https://bsky.app/profile/truecatspr.bsky.social" target="_blank" aria-label="Bluesky"><img src="Assets/icon_bluesky.png" alt="BS"></a>
+            <a href="https://www.instagram.com/truecatspr/" target="_blank" aria-label="Instagram"><img src="Assets/icon_instagram.png" alt="IG" /></a>
+            <a href="https://www.tiktok.com/@truecatspr" target="_blank" aria-label="TikTok"><img src="Assets/icon_tiktok.png" alt="TT" /></a>
+            <a href="https://open.spotify.com/user/317fjhiyokxw232jy7get6x3wyxy" target="_blank" aria-label="Spotify"><img src="Assets/icon_spotify.png" alt="SP" /></a>
+            <a href="https://www.youtube.com/@truecatspr" target="_blank" aria-label="YouTube"><img src="Assets/icon_youtube.png" alt="YT" /></a>
+            <a href="https://bsky.app/profile/truecatspr.bsky.social" target="_blank" aria-label="Bluesky"><img src="Assets/icon_bluesky.png" alt="BS" /></a>
         </div>
         <div class="controls-container">
             <div class="lang-switch">
@@ -29,14 +28,14 @@
             </div>
         </div>
     </div>
-    
-    <!-- Header: Logo NEBEN Text -->
+
+    <!-- Header: Logo (bleibt) -->
     <header class="header-banner">
         <a href="index.html" class="logo-link">
             <div class="logo-container">
                 <picture>
-                    <source srcset="Assets/Truecatspr_Logo_Transparent_Dark.png" media="(prefers-color-scheme: light)">
-                    <img src="Assets/Truecatspr_Logo_Transparent_Light.png" alt="TCPR Logo" class="logo-img">
+                    <source srcset="Assets/Truecatspr_Logo_Transparent_Dark.png" media="(prefers-color-scheme: light)" />
+                    <img src="Assets/Truecatspr_Logo_Transparent_Light.png" alt="TCPR Logo" class="logo-img" />
                 </picture>
                 <div class="logo-text">
                     <span class="tc-white">truecats</span><span class="tc-gold">pr</span>
@@ -45,69 +44,56 @@
         </a>
     </header>
 
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html" data-i18n="nav-home">Home</a></li>
-            <li><a href="Sites/services.html" data-i18n="nav-services">Packages</a></li>
-            <li><a href="Sites/how-it-works.html" data-i18n="nav-how">How it works</a></li>
-            <li><a href="Sites/about.html" data-i18n="nav-about">About Us</a></li>
-            <li><a href="Sites/contact.html" data-i18n="nav-contact">Contact & Submission</a></li>
-        </ul>
-    </nav>
+    <!-- Navigation wurde entfernt („Reiter“ weg) -->
 
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <h1 data-i18n="hero-headline">Your music deserves more than algorithmic noise.</h1>
-            <p data-i18n="hero-sub">Editorial & Digital PR, Press Relations and Strategic Music Promotion.</p>
-            <div class="hero-btns">
-                <a href="Sites/services.html" class="btn-primary" data-i18n="btn-packages">Our Packages (from 99€)</a>
-                <a href="Sites/contact.html" class="btn-secondary" data-i18n="btn-submit">Submit Material for Review</a>
-            </div>
-        </section>
-
-        <!-- Challenge & Solution -->
-        <section class="info-grid">
-            <div class="info-box">
-                <h2 data-i18n="problem-title">The Challenge</h2>
-                <p data-i18n="problem-text">Daily releases flood the market. Many artists lack the professional editorial background or the time to maintain a consistent digital presence. Standard ads are not enough to build lasting fan loyalty.</p>
-            </div>
-            <div class="info-box">
-                <h2 data-i18n="solution-title">Our Solution</h2>
-                <p data-i18n="solution-text">We translate your raw material into professional EPKs, compelling press releases, and strategic playlist pitching. Combined with visual storytelling for social media, we create a 360° PR presence.</p>
-            </div>
-        </section>
-
-        <!-- Competences -->
-        <section class="competence-grid">
-            <div class="comp-card">
-                <h3 data-i18n="comp-1-title">Editorial & Text-PR</h3>
-                <p data-i18n="comp-1-text">Creation of professional EPKs, engaging bios, and media-ready press releases for blogs and magazines.</p>
-            </div>
-            <div class="comp-card">
-                <h3 data-i18n="comp-2-title">Playlist & Streaming</h3>
-                <p data-i18n="comp-2-text">Targeted pitching to genre-specific streaming curators and editorial playlist boards.</p>
-            </div>
-            <div class="comp-card">
-                <h3 data-i18n="comp-3-title">Online Media & Blogs</h3>
-                <p data-i18n="comp-3-text">Targeted press outreach to independent music blogs, online magazines, and digital tastemakers.</p>
-            </div>
-            <div class="comp-card">
-                <h3 data-i18n="comp-4-title">Visual Storytelling</h3>
-                <p data-i18n="comp-4-text">Converting your audio stems and studio takes into high-performing short-form video assets for Reels and TikTok.</p>
-            </div>
-        </section>
+    <!-- Hauptbereich: NUR die Launch-Karte -->
+    <main class="main-content" style="display: flex; align-items: center; justify-content: center; min-height: 60vh;">
+        <div class="launch-card">
+            <div class="launch-badge">Launching 2027</div>
+        </div>
     </main>
 
-    <footer class="footer-note">
-        <p data-i18n="footer-desc">Editorial & Digital PR Agency for the Independent Music Sector.</p>
-        <div style="margin: 15px 0;">
-            <a href="Sites/impressum.html" data-i18n="nav-imprint">Imprint</a> | 
-            <a href="Sites/datenschutz.html" data-i18n="nav-privacy">Privacy</a>
-        </div>
-        <p>&copy; 2026 truecatspr . <span data-i18n="footer-rights">All rights reserved.</span></p>
-    </footer>
-
     <script src="script.js"></script>
+
+    <!-- Kleiner Zusatz-Style für die Karte (nutzt deine CSS-Variablen) -->
+    <style>
+        .launch-card {
+            background: var(--box-bg);
+            border: 2px solid var(--gold);
+            border-radius: 24px;
+            padding: 60px 80px;
+            text-align: center;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 20px 60px rgba(var(--gold-rgb), 0.2);
+            max-width: 700px;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .launch-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 80px rgba(var(--gold-rgb), 0.35);
+        }
+        .launch-badge {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--gold);
+            text-shadow: 0 0 30px rgba(var(--gold-rgb), 0.25);
+            line-height: 1.1;
+        }
+        .launch-sub {
+            margin-top: 20px;
+            font-size: 1.4rem;
+            color: var(--text-main);
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+        /* Mobil-Anpassung */
+        @media (max-width: 600px) {
+            .launch-card { padding: 40px 30px; }
+            .launch-badge { font-size: 2.6rem; }
+            .launch-sub { font-size: 1.1rem; }
+        }
+    </style>
 </body>
 </html>
