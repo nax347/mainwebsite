@@ -1,6 +1,6 @@
 /**
  * truecatspr - Haupt-Script
- * Enthält: Übersetzungen (Update: Services-Deep-Dive), Theme-Management und Hintergrund-Animation
+ * Enthält: Übersetzungen (Update: Komplette Rechtstexte & Kontakt-Erweiterung), Theme-Management und Hintergrund-Animation
  */
 
 const translations = {
@@ -9,6 +9,10 @@ const translations = {
         'nav-home': 'Home', 'nav-services': 'Packages', 'nav-how': 'How it works', 'nav-about': 'About Us', 'nav-contact': 'Contact',
         'nav-imprint': 'Imprint', 'nav-privacy': 'Privacy',
         
+        // Launch Card (Home Alternative)
+        'launch-title': 'Launching 2027',
+        'launch-sub': 'Editorial & Digital PR Agency for the Independent Music Sector.',
+
         // Home
         'hero-headline': 'Your music deserves more than algorithmic noise.',
         'hero-sub': 'Editorial & Digital PR, Press Relations and Strategic Music Promotion.',
@@ -27,7 +31,7 @@ const translations = {
         'comp-4-title': 'Visual Storytelling',
         'comp-4-text': 'Converting your audio stems and studio takes into high-performing short-form video assets for Reels and TikTok.',
         
-        // Services (Updated to match your detailed HTML)
+        // Services
         'serv-headline': 'Transparent Fixed-Price Packages',
         'serv-sub': 'End the weekly content panic. We translate your raw artistic output into a structured, compelling, and professional multi-channel campaign.',
         'pkg-1-title': 'EPK Creation & Social Foundation',
@@ -74,6 +78,7 @@ const translations = {
         // Contact Form
         'contact-headline': 'Contact & Submission',
         'contact-sub': 'Ready to end the content panic? Send us your project details.',
+        'contact-alt-email': 'Alternatively, you can send files or direct inquiries via email to:',
         'form-artist': 'Artist / Band Name *',
         'form-email': 'E-Mail Address *',
         'form-package': 'Interested Package / Inquiry Type',
@@ -82,11 +87,20 @@ const translations = {
         'form-newsletter': 'I would like to receive updates from truecatspr.',
         'form-submit': 'Send Inquiry & Submit Material',
 
-        // Legal
+        // Legal / Imprint (Full Version)
         'imprint-headline': 'Imprint',
-        'imprint-sub': 'Information according to § 5 TMG',
+        'imprint-sub': 'Legal Notice / Angaben gemäß § 5 TMG',
+        'imprint-content': 'Markus Tobias Buchwalder\nOsningstraße 2\n49082 Osnabrück\nGermany\n\nContact:\nE-Mail: info@truecatspr.com\n\nResponsible for content / Verantwortlich für den Inhalt (gem. § 18 Abs. 2 MStV):\nMarkus Tobias Buchwalder\n(Address as above)\n\nDisclaimer:\nDespite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.',
+        
+        // Privacy Policy (Full Version)
         'privacy-headline': 'Privacy Policy',
         'privacy-sub': 'Information on data protection according to GDPR (DSGVO)',
+        'privacy-section-1': '1. An overview of data protection\nGeneral information: The following gives a simple overview of what happens to your personal information when you visit this website. Personal information is any data with which you could be personally identified.',
+        'privacy-section-2': '2. Hosting and Content Delivery Networks (CDN)\nGitHub Pages: This website is hosted by GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). When you visit our website, GitHub logs technical connection data (server logs), including your IP address. For details, please see GitHub\'s privacy statement.',
+        'privacy-section-3': '3. General information and mandatory information\nResponsible party for data processing on this website is:\nMarkus Tobias Buchwalder\nOsningstraße 2\n49082 Osnabrück, Germany\nE-Mail: info@truecatspr.com',
+        'privacy-section-4': '4. Data collection on this website\nContact Form & Formspree: Your details from the inquiry form will be stored for the purpose of processing the request. We use Formspree as a processor. Data is processed based on your consent (Art. 6 Abs. 1 lit. a GDPR).\nNewsletter (Brevo): For sending newsletters, we use Brevo. You can revoke your consent at any time via the unsubscribe link.',
+        'privacy-section-5': '5. Your rights\nYou have the right at any time to request free information about your stored personal data, its origin, recipients, and the purpose of its data processing. You also have the right to request the correction or deletion of this data.',
+
         'footer-desc': 'Editorial & Digital PR Agency for the Independent Music Sector.',
         'footer-rights': 'All rights reserved.'
     },
@@ -94,6 +108,10 @@ const translations = {
         // Navigation
         'nav-home': 'Home', 'nav-services': 'Leistungen & Pakete', 'nav-how': "So funktioniert's", 'nav-about': 'Über uns', 'nav-contact': 'Kontakt & Einreichung',
         'nav-imprint': 'Impressum', 'nav-privacy': 'Datenschutz',
+
+        // Launch Card (Home Alternative)
+        'launch-title': 'Startet 2027',
+        'launch-sub': 'Redaktionelle & digitale Musik-PR Agentur im Independent-Sektor.',
 
         // Home
         'hero-headline': 'Deine Musik verdient mehr als algorithmisches Rauschen.',
@@ -113,7 +131,7 @@ const translations = {
         'comp-4-title': 'Visuelles Storytelling',
         'comp-4-text': 'Wir verwandeln Audio-Stems und Studio-Szenen in performante Video-Assets für Instagram Reels, TikTok und Shorts.',
 
-        // Leistungen (Deutsche Übersetzung der neuen Details)
+        // Leistungen
         'serv-headline': 'Transparente Festpreis-Pakete',
         'serv-sub': 'Schluss mit der wöchentlichen Content-Panik. Wir übersetzen deinen kreativen Output in eine strukturierte, packende und professionelle Kampagne.',
         'pkg-1-title': 'EPK Erstellung & Social Basis',
@@ -160,6 +178,7 @@ const translations = {
         // Kontaktformular
         'contact-headline': 'Kontakt & Einreichung',
         'contact-sub': 'Bereit für professionelle PR? Schick uns deine Projektdetails.',
+        'contact-alt-email': 'Alternativ kannst du Dateien oder direkte Anfragen per E-Mail senden an:',
         'form-artist': 'Artist / Bandname *',
         'form-email': 'E-Mail Adresse *',
         'form-package': 'Interesse an Paket / Anfrage-Typ',
@@ -168,11 +187,20 @@ const translations = {
         'form-newsletter': 'Ich möchte Updates von truecatspr erhalten.',
         'form-submit': 'Anfrage senden & Material einreichen',
 
-        // Legal
+        // Legal / Impressum (Vollversion)
         'imprint-headline': 'Impressum',
         'imprint-sub': 'Angaben gemäß § 5 TMG',
+        'imprint-content': 'Markus Tobias Buchwalder\nOsningstraße 2\n49082 Osnabrück\nDeutschland\n\nKontakt:\nE-Mail: info@truecatspr.com\n\nVerantwortlich für den Inhalt (gem. § 18 Abs. 2 MStV):\nMarkus Tobias Buchwalder\n(Anschrift wie oben)\n\nHaftungshinweis:\nTrotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.',
+        
+        // Datenschutz (Vollversion)
         'privacy-headline': 'Datenschutzerklärung',
         'privacy-sub': 'Informationen zum Datenschutz gemäß DSGVO',
+        'privacy-section-1': '1. Datenschutz auf einen Blick\nAllgemeine Hinweise: Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.',
+        'privacy-section-2': '2. Hosting und Content Delivery Networks (CDN)\nGitHub Pages: Diese Website wird bei GitHub Pages (GitHub, Inc.) gehostet. GitHub erfasst technische Verbindungsdaten (Server-Logs), inklusive Ihrer IP-Adresse. Details finden Sie in der Datenschutzerklärung von GitHub.',
+        'privacy-section-3': '3. Allgemeine Hinweise und Pflichtinformationen\nVerantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:\nMarkus Tobias Buchwalder\nOsningstraße 2\n49082 Osnabrück, Deutschland\nE-Mail: info@truecatspr.com',
+        'privacy-section-4': '4. Datenerfassung auf dieser Website\nKontaktformular & Formspree: Ihre Angaben aus dem Anfrageformular werden zwecks Bearbeitung der Anfrage gespeichert. Wir nutzen Formspree als Auftragsverarbeiter. Die Verarbeitung erfolgt auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).\nNewsletter (Brevo): Für den Versand nutzen wir Brevo. Sie können Ihre Einwilligung jederzeit über den Abmeldelink widerrufen.',
+        'privacy-section-5': '5. Ihre Rechte\nSie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht auf Berichtigung oder Löschung dieser Daten.',
+
         'footer-desc': 'Redaktionelle & digitale Musik-PR Agentur im Independent-Sektor.',
         'footer-rights': 'Alle Rechte vorbehalten.'
     }
@@ -184,13 +212,15 @@ function changeLanguage(lang) {
     localStorage.setItem('selectedLanguage', lang);
     
     // Aktiven Status der Buttons umschalten
-    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
-    document.getElementById('lang-de').classList.toggle('active', lang === 'de');
+    const btnEn = document.getElementById('lang-en');
+    const btnDe = document.getElementById('lang-de');
+    if(btnEn) btnEn.classList.toggle('active', lang === 'en');
+    if(btnDe) btnDe.classList.toggle('active', lang === 'de');
     
     // Alle Elemente mit data-i18n Attribut übersetzen
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 el.placeholder = translations[lang][key];
             } else {
@@ -200,8 +230,10 @@ function changeLanguage(lang) {
     });
 }
 
-document.getElementById('lang-en').addEventListener('click', () => changeLanguage('en'));
-document.getElementById('lang-de').addEventListener('click', () => changeLanguage('de'));
+const lEn = document.getElementById('lang-en');
+const lDe = document.getElementById('lang-de');
+if(lEn) lEn.addEventListener('click', () => changeLanguage('en'));
+if(lDe) lDe.addEventListener('click', () => changeLanguage('de'));
 
 
 /* --- 2. THEME-LOGIK (DARK/LIGHT) --- */
@@ -213,33 +245,29 @@ function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     
-    // Text im Button anpassen
-    if (theme === 'light') {
-        themeText.textContent = 'DARK MODE';
-    } else {
-        themeText.textContent = 'LIGHT MODE';
+    if (themeText) {
+        themeText.textContent = (theme === 'light') ? 'DARK MODE' : 'LIGHT MODE';
     }
 
-    // Visualizer neu starten, damit Linienfarben passen
     if (typeof initVisualizer === 'function') {
         initVisualizer();
     }
 }
 
-themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    setTheme(currentTheme === 'light' ? 'dark' : 'light');
-});
+if(themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        setTheme(currentTheme === 'light' ? 'dark' : 'light');
+    });
+}
 
 
 /* --- 3. INITIALISIERUNG --- */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Sprache laden
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     changeLanguage(savedLang);
 
-    // Theme laden
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
     
@@ -251,7 +279,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTheme('dark');
     }
     
-    // Visualizer starten
     initVisualizer();
     animate();
 });
@@ -271,7 +298,6 @@ function initVisualizer() {
     lines = [];
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
     
-    // Linienfarben basierend auf Theme
     const colorGold = isLight ? 'rgba(212, 150, 42, 0.15)' : 'rgba(237, 175, 66, 0.05)';
     const colorMuted = isLight ? 'rgba(0, 0, 0, 0.04)' : 'rgba(255, 255, 255, 0.03)';
 

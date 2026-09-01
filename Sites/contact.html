@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>truecatspr - Contact & Submission</title>
+    <title>Contact & Submission – truecatspr</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../Assets/TCprLogo.ico"> 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <!-- Hintergrund Animation -->
     <canvas id="bg-visualizer"></canvas>
 
-    <!-- Utility Bar: Socials + Language -->
+    <!-- Utility Bar: Socials + Language + Theme -->
     <div class="utility-bar">
         <div class="social-icons-top">
             <a href="https://www.instagram.com/truecatspr/" target="_blank" aria-label="Instagram"><img src="../Assets/icon_instagram.png" alt="IG"></a>
@@ -30,7 +32,7 @@
         </div>
     </div>
     
-    <!-- Header: Logo NEBEN Text -->
+    <!-- Header: Logo -->
     <header class="header-banner">
         <a href="../index.html" class="logo-link">
             <div class="logo-container">
@@ -45,86 +47,94 @@
         </a>
     </header>
 
+    <!-- Navigation -->
     <nav>
         <ul class="nav-links">
             <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
             <li><a href="services.html" data-i18n="nav-services">Packages</a></li>
             <li><a href="how-it-works.html" data-i18n="nav-how">How it works</a></li>
             <li><a href="about.html" data-i18n="nav-about">About Us</a></li>
-            <li><a href="contact.html" data-i18n="nav-contact">Contact & Submission</a></li>
+            <li><a href="contact.html" data-i18n="nav-contact" style="color: var(--gold); font-weight: bold;">Contact & Submission</a></li>
         </ul>
     </nav>
 
+    <!-- Hauptbereich: Kontaktformular -->
     <main class="main-content">
-        <!-- Hero Section -->
         <section class="hero-section">
-            <h1 data-i18n="contact-headline">Contact & Material Submission</h1>
-            <p data-i18n="contact-sub">Ready to end the weekly content panic? Drop us a message, share your project details, or send your tracks for review.</p>
+            <h1 data-i18n="contact-headline">Contact & Submission</h1>
+            <p data-i18n="contact-sub">Ready to end the content panic? Send us your project details.</p>
         </section>
 
-        <!-- Form Section -->
-        <section class="info-box" style="margin-bottom: 80px; text-align: left;">
-            <form action="https://formspree.io/f/mrbekwna" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- Kontaktformular -->
+        <section class="info-box" style="max-width: 700px; margin: 0 auto 40px; text-align: left;">
+            <form action="https://formspree.io/f/XXXXXX" method="POST">
                 
                 <div>
-                    <label for="artist-name" style="display: block; margin-bottom: 5px; color: var(--gold); font-weight: bold;" data-i18n="form-artist">Artist / Band Name *</label>
-                    <input type="text" id="artist-name" name="artist_name" required style="width: 100%; padding: 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--gold); color: #fff; border-radius: 4px;">
+                    <label data-i18n="form-artist">Artist / Band Name *</label>
+                    <input type="text" name="artist" required data-i18n="form-artist" placeholder="Artist / Band Name *">
                 </div>
 
                 <div>
-                    <label for="contact-email" style="display: block; margin-bottom: 5px; color: var(--gold); font-weight: bold;" data-i18n="form-email">E-Mail Address *</label>
-                    <input type="email" id="contact-email" name="email" required style="width: 100%; padding: 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--gold); color: #fff; border-radius: 4px;">
+                    <label data-i18n="form-email">E-Mail Address *</label>
+                    <input type="email" name="email" required data-i18n="form-email" placeholder="E-Mail Address *">
                 </div>
 
                 <div>
-                    <label for="package-select" style="display: block; margin-bottom: 5px; color: var(--gold); font-weight: bold;" data-i18n="form-package">Interested Package / Inquiry Type</label>
-                    <select id="package-select" name="package" style="width: 100%; padding: 12px; background: #111; border: 1px solid var(--gold); color: #fff; border-radius: 4px;">
-                        <option value="epk">EPK Creation & Social Foundation (99 €)</option>
-                        <option value="single">Single Campaign (350 €)</option>
-                        <option value="ep">EP Campaign (750 €)</option>
-                        <option value="album">Album Campaign (1,500 €)</option>
-                        <option value="general">General Inquiry / Other</option>
+                    <label data-i18n="form-package">Interested Package / Inquiry Type</label>
+                    <select name="package">
+                        <option value="EPK / Social Foundation">EPK / Social Foundation (99€)</option>
+                        <option value="Single Campaign">Single Campaign (350€)</option>
+                        <option value="EP Campaign">EP Campaign (750€)</option>
+                        <option value="Album Campaign">Album Campaign (1.500€)</option>
+                        <option value="General Inquiry">General Inquiry</option>
                     </select>
                 </div>
 
                 <div>
-                    <label for="project-links" style="display: block; margin-bottom: 5px; color: var(--gold); font-weight: bold;" data-i18n="form-links">Google Drive, Dropbox, SoundCloud or Spotify Link (Optional)</label>
-                    <input type="text" id="project-links" name="links" placeholder="https://drive.google.com/... or https://soundcloud.com/..." style="width: 100%; padding: 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--gold); color: #fff; border-radius: 4px;">
+                    <label data-i18n="form-links">Links (Drive, SoundCloud, etc.)</label>
+                    <input type="text" name="links" data-i18n="form-links" placeholder="Links (Drive, SoundCloud, etc.)">
                 </div>
 
                 <div>
-                    <label for="message" style="display: block; margin-bottom: 5px; color: var(--gold); font-weight: bold;" data-i18n="form-msg">Your Message / Project Details *</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Tell us about your upcoming release, timeline, and current setup..." style="width: 100%; padding: 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--gold); color: #fff; border-radius: 4px; font-family: inherit;"></textarea>
+                    <label data-i18n="form-msg">Your Message / Project Details *</label>
+                    <textarea name="message" rows="6" required data-i18n="form-msg" placeholder="Your Message / Project Details *"></textarea>
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
-                    <input type="checkbox" id="newsletter" name="subscribe_newsletter" value="yes" style="width: 18px; height: 18px; accent-color: var(--gold); cursor: pointer;">
-                    <label for="newsletter" style="color: #ccc; font-size: 0.95rem; cursor: pointer;" data-i18n="form-newsletter">I would like to receive updates and news from truecatspr.</label>
+                <!-- Newsletter Checkbox -->
+                <div style="display: flex; align-items: flex-start; gap: 10px; margin-top: 10px;">
+                    <input type="checkbox" name="newsletter" id="newsletter" style="width: auto; margin-top: 5px;">
+                    <label for="newsletter" data-i18n="form-newsletter" style="font-weight: normal; font-size: 0.85rem; color: var(--text-main);">
+                        I would like to receive updates from truecatspr.
+                    </label>
                 </div>
 
-                <div style="margin-top: 10px; text-align: center;">
-                    <button type="submit" class="btn-primary" style="cursor: pointer; width: 100%; padding: 15px; font-size: 1.1rem;" data-i18n="form-submit">Send Inquiry & Submit Material</button>
+                <div style="margin-top: 30px;">
+                    <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="form-submit">
+                        Send Inquiry & Submit Material
+                    </button>
                 </div>
-
             </form>
-
-            <!-- Direkter E-Mail-Hinweis -->
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(212, 175, 55, 0.3); text-align: center; color: #aaa; font-size: 0.95rem;">
-                <p>Alternatively, you can send files or direct inquiries via email to: <br>
-                <a href="mailto:info@truecatspr.com" style="color: var(--gold); font-weight: bold; text-decoration: none;">info@truecatspr.com</a></p>
-            </div>
         </section>
+
+        <!-- Kontakt-Alternative (JETZT UNTER DEM FORMULAR) -->
+        <div style="margin-bottom: 100px; color: var(--text-main); text-align: center;">
+            <p data-i18n="contact-alt-email">Alternatively, you can send files or direct inquiries via email to:</p>
+            <p style="font-weight: bold; color: var(--gold); margin-top: 5px; font-size: 1.2rem;">info@truecatspr.com</p>
+        </div>
+
     </main>
 
+    <!-- Footer -->
     <footer class="footer-note">
         <p data-i18n="footer-desc">Editorial & Digital PR Agency for the Independent Music Sector.</p>
         <div style="margin: 15px 0;">
-            <a href="impressum.html" data-i18n="nav-imprint">Imprint</a> | 
-            <a href="datenschutz.html" data-i18n="nav-privacy">Privacy</a>
+            <a href="imprint.html" data-i18n="nav-imprint">Imprint</a> | 
+            <a href="privacy.html" data-i18n="nav-privacy">Privacy</a>
         </div>
-        <p>&copy; 2026 truecatspr. <span data-i18n="footer-rights">All rights reserved.</span></p>
+        <p>&copy; 2026 truecatspr . <span data-i18n="footer-rights">All rights reserved.</span></p>
     </footer>
 
+    <!-- Script (Pfad nach oben) -->
     <script src="../script.js"></script>
 </body>
 </html>

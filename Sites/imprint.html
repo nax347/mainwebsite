@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>truecatspr - Privacy Policy</title>
+    <title>Imprint – truecatspr</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../Assets/TCprLogo.ico"> 
+    <!-- Stylesheet (Pfad nach oben, da diese Datei in /Sites/ liegt) -->
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <!-- Hintergrund Animation -->
     <canvas id="bg-visualizer"></canvas>
 
-    <!-- Utility Bar: Socials + Language -->
+    <!-- Utility Bar: Socials + Language + Theme -->
     <div class="utility-bar">
         <div class="social-icons-top">
             <a href="https://www.instagram.com/truecatspr/" target="_blank" aria-label="Instagram"><img src="../Assets/icon_instagram.png" alt="IG"></a>
@@ -30,7 +32,7 @@
         </div>
     </div>
     
-    <!-- Header: Logo NEBEN Text -->
+    <!-- Header: Logo -->
     <header class="header-banner">
         <a href="../index.html" class="logo-link">
             <div class="logo-container">
@@ -45,9 +47,11 @@
         </a>
     </header>
 
+    <!-- Navigation -->
     <nav>
         <ul class="nav-links">
             <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
+            <!-- Falls die anderen Seiten noch nicht existieren, führen die Links ins Leere oder zurück zur Home -->
             <li><a href="services.html" data-i18n="nav-services">Packages</a></li>
             <li><a href="how-it-works.html" data-i18n="nav-how">How it works</a></li>
             <li><a href="about.html" data-i18n="nav-about">About Us</a></li>
@@ -55,52 +59,58 @@
         </ul>
     </nav>
 
+    <!-- Hauptbereich: Impressum -->
     <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <h1 data-i18n="privacy-headline">Privacy Policy</h1>
-            <p data-i18n="privacy-sub">Information on data protection according to GDPR (DSGVO)</p>
-        </section>
+        <section class="legal-content-container" style="text-align: left; max-width: 800px; margin: 0 auto; padding-bottom: 100px;">
+            
+            <!-- Headline & Subline werden durch script.js gefüllt -->
+            <h1 data-i18n="imprint-headline" style="font-size: 2.5rem; color: var(--text-headline); margin-bottom: 10px; text-transform: uppercase;">Imprint</h1>
+            <p data-i18n="imprint-sub" style="color: var(--gold); font-weight: bold; margin-bottom: 40px; letter-spacing: 1px;">Information according to § 5 TMG</p>
+            
+            <!-- Der vollständige Textblock aus der script.js -->
+            <div class="info-box" style="line-height: 1.8;">
+                <p data-i18n="imprint-content">
+                    <!-- Platzhalter-Text (wird sofort durch JS ersetzt) -->
+                    Loading legal information...
+                </p>
+            </div>
 
+<<<<<<< HEAD:Sites/impressum.html
         <!-- Content Section -->
         <section class="info-box" style="margin-bottom: 80px; text-align: left; line-height: 1.8;">
-            <h2>1. An overview of data protection</h2>
-            <p><strong>General information</strong><br>
-            The following gives a simple overview of what happens to your personal information when you visit this website. Personal information is any data with which you could be personally identified.</p>
+            <p><strong>Legal Notice / Angaben gemäß § 5 TMG:</strong><br>
+            Markus Tobias Buchwalder<br>
+            Osningstraße 2<br>
+            49082 Osnabrück<br>
+            Germany</p>
 
-            <h2>2. Hosting and Content Delivery Networks (CDN)</h2>
-            <p><strong>GitHub Pages</strong><br>
-            This website is hosted by GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). When you visit our website, GitHub logs technical connection data (server logs), including your IP address. For details, please see GitHub's privacy statement: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" style="color: var(--gold);">GitHub Privacy Statement</a>.</p>
-
-            <h2>3. General information and mandatory information</h2>
-            <p><strong>Responsible party</strong><br>
-            The responsible party for data processing on this website is:<br>
-            [Dein Vorname und Nachname]<br>
-            [Straße und Hausnummer]<br>
-            [PLZ] Osnabrück, Germany<br>
+            <p><strong>Contact:</strong><br>
             E-Mail: <a href="mailto:info@truecatspr.com" style="color: var(--gold);">info@truecatspr.com</a></p>
 
-            <h2>4. Data collection on this website</h2>
-            <p><strong>Contact Form & Formspree</strong><br>
-            If you send us inquiries via our contact form, your details from the inquiry form, including the contact data you provided there, will be stored by us for the purpose of processing the request and in case of follow-up questions. We use <strong>Formspree</strong> (Formspree, Inc.) as a processor to handle form submissions securely. The data is processed based on your consent (Art. 6 Abs. 1 lit. a GDPR).</p>
+            <p><strong>Responsible for content / Verantwortlich für den Inhalt (gem. § 18 Abs. 2 MStV):</strong><br>
+            Markus Tobias Buchwalder<br>
+            (Anschrift wie oben)</p>
 
-            <p><strong>Newsletter (Brevo)</strong><br>
-            If you check the optional newsletter box in our contact form, your email address will be used to send you updates and news. For sending newsletters, we use <strong>Brevo</strong> (Sendinblue GmbH). You can revoke your consent at any time via the unsubscribe link in every newsletter email.</p>
-
-            <h2>5. Your rights</h2>
-            <p>You have the right at any time to request free information about your stored personal data, its origin, recipients, and the purpose of its data processing. You also have the right to request the correction or deletion of this data.</p>
+            <p><strong>Disclaimer:</strong><br>
+            Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.</p>
+</section>
+=======
         </section>
+>>>>>>> 7d28711 (bla):Sites/imprint.html
     </main>
 
+    <!-- Footer -->
     <footer class="footer-note">
         <p data-i18n="footer-desc">Editorial & Digital PR Agency for the Independent Music Sector.</p>
         <div style="margin: 15px 0;">
-            <a href="impressum.html" data-i18n="nav-imprint">Imprint</a> | 
-            <a href="datenschutz.html" data-i18n="nav-privacy">Privacy</a>
+            <!-- Aktive Seite hervorheben oder einfach Links belassen -->
+            <a href="imprint.html" data-i18n="nav-imprint" style="color: var(--gold); font-weight: bold;">Imprint</a> | 
+            <a href="privacy.html" data-i18n="nav-privacy">Privacy</a>
         </div>
-        <p>&copy; 2026 truecatspr. <span data-i18n="footer-rights">All rights reserved.</span></p>
+        <p>&copy; 2026 truecatspr . <span data-i18n="footer-rights">All rights reserved.</span></p>
     </footer>
 
+    <!-- Script (Pfad nach oben) -->
     <script src="../script.js"></script>
 </body>
 </html>

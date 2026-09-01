@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>truecatspr - Imprint</title>
+    <title>Privacy Policy – truecatspr</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../Assets/TCprLogo.ico"> 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <!-- Hintergrund Animation -->
     <canvas id="bg-visualizer"></canvas>
 
-    <!-- Utility Bar: Socials + Language -->
+    <!-- Utility Bar: Socials + Language + Theme -->
     <div class="utility-bar">
         <div class="social-icons-top">
             <a href="https://www.instagram.com/truecatspr/" target="_blank" aria-label="Instagram"><img src="../Assets/icon_instagram.png" alt="IG"></a>
@@ -30,7 +32,7 @@
         </div>
     </div>
     
-    <!-- Header: Logo NEBEN Text -->
+    <!-- Header: Logo -->
     <header class="header-banner">
         <a href="../index.html" class="logo-link">
             <div class="logo-container">
@@ -45,6 +47,7 @@
         </a>
     </header>
 
+    <!-- Navigation -->
     <nav>
         <ul class="nav-links">
             <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
@@ -55,42 +58,49 @@
         </ul>
     </nav>
 
+    <!-- Hauptbereich: Datenschutz -->
     <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <h1 data-i18n="imprint-headline">Imprint</h1>
-            <p data-i18n="imprint-sub">Information according to § 5 TMG</p>
+        <section class="legal-content-container" style="text-align: left; max-width: 800px; margin: 0 auto; padding-bottom: 100px;">
+            
+            <!-- Headline & Subline -->
+            <h1 data-i18n="privacy-headline" style="font-size: 2.5rem; color: var(--text-headline); margin-bottom: 10px; text-transform: uppercase;">Privacy Policy</h1>
+            <p data-i18n="privacy-sub" style="color: var(--gold); font-weight: bold; margin-bottom: 40px; letter-spacing: 1px;">Information on data protection according to GDPR (DSGVO)</p>
+            
+            <!-- Die einzelnen Sektionen aus der script.js -->
+            <div class="info-box" style="line-height: 1.8; margin-bottom: 20px;">
+                <p data-i18n="privacy-section-1">Loading section 1...</p>
+            </div>
+
+            <div class="info-box" style="line-height: 1.8; margin-bottom: 20px;">
+                <p data-i18n="privacy-section-2">Loading section 2...</p>
+            </div>
+
+            <div class="info-box" style="line-height: 1.8; margin-bottom: 20px;">
+                <p data-i18n="privacy-section-3">Loading section 3...</p>
+            </div>
+
+            <div class="info-box" style="line-height: 1.8; margin-bottom: 20px;">
+                <p data-i18n="privacy-section-4">Loading section 4...</p>
+            </div>
+
+            <div class="info-box" style="line-height: 1.8; margin-bottom: 20px;">
+                <p data-i18n="privacy-section-5">Loading section 5...</p>
+            </div>
+
         </section>
-
-        <!-- Content Section -->
-        <section class="info-box" style="margin-bottom: 80px; text-align: left; line-height: 1.8;">
-            <p><strong>Legal Notice / Angaben gemäß § 5 TMG:</strong><br>
-            Markus Tobias Buchwalder<br>
-            Osningstraße 2<br>
-            49082 Osnabrück<br>
-            Germany</p>
-
-            <p><strong>Contact:</strong><br>
-            E-Mail: <a href="mailto:info@truecatspr.com" style="color: var(--gold);">info@truecatspr.com</a></p>
-
-            <p><strong>Responsible for content / Verantwortlich für den Inhalt (gem. § 18 Abs. 2 MStV):</strong><br>
-            Markus Tobias Buchwalder<br>
-            (Anschrift wie oben)</p>
-
-            <p><strong>Disclaimer:</strong><br>
-            Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.</p>
-</section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer-note">
         <p data-i18n="footer-desc">Editorial & Digital PR Agency for the Independent Music Sector.</p>
         <div style="margin: 15px 0;">
-            <a href="impressum.html" data-i18n="nav-imprint">Imprint</a> | 
-            <a href="datenschutz.html" data-i18n="nav-privacy">Privacy</a>
+            <a href="imprint.html" data-i18n="nav-imprint">Imprint</a> | 
+            <a href="privacy.html" data-i18n="nav-privacy" style="color: var(--gold); font-weight: bold;">Privacy</a>
         </div>
-        <p>&copy; 2026 truecatspr. <span data-i18n="footer-rights">All rights reserved.</span></p>
+        <p>&copy; 2026 truecatspr . <span data-i18n="footer-rights">All rights reserved.</span></p>
     </footer>
 
+    <!-- Script -->
     <script src="../script.js"></script>
 </body>
 </html>
